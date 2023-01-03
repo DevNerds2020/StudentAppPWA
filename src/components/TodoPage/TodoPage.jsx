@@ -47,7 +47,7 @@ function TodoPage() {
         width: 100%;
         min-width: 40rem;
         height: 100%;
-        background-color: #f0f8ff;
+        background-color: transparent;
       `}
     >
       <h2
@@ -71,7 +71,6 @@ function TodoPage() {
           className={css`
             margin: 10px;
             color: #ff1493;
-            background-color: #f0f8ff;
             height: 60px;
             min-width: 28rem;
           `}
@@ -112,7 +111,6 @@ function TodoPage() {
               align-items: center;
               flex-direction: row;
               width: 100%;
-              background-color: #f0f8ff;
               margin: 10px;
               direction: ${localeLanguage === 'en' ? 'ltr' : 'rtl'};
             `}

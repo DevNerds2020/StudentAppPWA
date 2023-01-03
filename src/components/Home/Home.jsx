@@ -45,8 +45,11 @@ function Home() {
     handleClose();
   };
   return (
-    <Box>
-      <Button onClick={openMenu}>{localeLanguage}</Button>
+    <Box
+      className={css`
+        width: 100%;
+      `}
+    >
       <Menu
         id="fade-menu"
         MenuListProps={{
@@ -65,10 +68,22 @@ function Home() {
         className={css`
           display: flex;
           justify-content: center;
-          margin-top: 25px;
+          margin-top: 10px;
           flex-direction: column;
+          align-items: center;
         `}
       >
+        <h2
+          className={css`
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+          `}
+        >
+          {translation[localeLanguage].highSchoolBody}
+        </h2>
+
         <Link className={LinkStyle} to="todo">
           {translation[localeLanguage].todo}
         </Link>
@@ -81,7 +96,16 @@ function Home() {
         <Link className={LinkStyle} to="notes">
           {translation[localeLanguage].notes}
         </Link>
+        <Link className={LinkStyle} to="notes">
+          {translation[localeLanguage].teachingMovies}
+        </Link>
+        <Link className={LinkStyle} to="notes">
+          {translation[localeLanguage].books}
+        </Link>
       </Box>
+      <Button variant="contained" onClick={openMenu}>
+        {localeLanguage}
+      </Button>
     </Box>
   );
 }

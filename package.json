@@ -26,6 +26,7 @@
     "react-router-dom": "^6.6.1",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
+    "sass": "^1.57.1",
     "sort-by": "^1.2.0"
   },
   "devDependencies": {

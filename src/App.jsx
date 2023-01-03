@@ -10,9 +10,27 @@ store.subscribe(() => saveToLocalStorage(store.getState()));
 
 function App() {
   return (
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <>
+      <div className="area">
+        <ul className="circles">
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+        </ul>
+      </div>
+      <div className="context">
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      </div>
+    </>
   );
 }
 
