@@ -75,10 +75,10 @@ function Home() {
       >
         <h2
           className={css`
-            font-size: 50px;
+            font-size: 1.5rem;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
           `}
         >
           {translation[localeLanguage].highSchoolBody}

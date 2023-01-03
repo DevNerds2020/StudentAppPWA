@@ -53,6 +53,7 @@ function TodoPage() {
       <h2
         className={css`
           color: #ff1493;
+          margin-bottom: 20px;
         `}
       >
         {translation[localeLanguage].todo}
