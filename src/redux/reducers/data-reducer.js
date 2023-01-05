@@ -36,8 +36,21 @@ const dataReducer = (state = initialState, action) => {
           return todo;
         }),
       };
+      case 'EDIT_TASK':
+        return{
+          ...state,
+          todoList: state.todoList.map((todo) => {
+            if (todo.id === action.payload) {
+              return {
+                ...todo,
+                title: action.payloadText,
+              };
+            }
+            return todo;
+          }),
+        };
     default:
       return state;
-  }
-};
+  
+}}
 export default dataReducer;

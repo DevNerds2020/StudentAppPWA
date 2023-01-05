@@ -3,11 +3,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import dataReducer from '../reducers/data-reducer';
 // convert object to string and store in localStorage
-/**
- * @function saveToLocalStorage
- * @param {Record<string, unknown>} state
- * @return {void} void
- */
+
 export const saveToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);

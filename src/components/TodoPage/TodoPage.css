@@ -1,0 +1,57 @@
+.addTodoBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:100%;
+    width: 30%;
+    min-width: 30rem;
+    background-color:#676cd0;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 8px;
+    padding-top: 9px;
+}
+.allContainer{
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        min-width: 40rem;
+        height: 100%;
+        background-color: transparent;
+}
+.textField{
+
+        margin: 10px;
+        color: #ff1493;
+        height: 60px;
+        width: 28rem;
+        overflow-wrap: break-word;
+}
+.taskHolder{
+    width: 36.4rem;
+    margin-top: -1.5rem;
+    background-color:#676cd0;
+    border-radius: 10px;
+    overflow: scroll;
+    border:#676cd0
+}
+
+::-webkit-scrollbar {
+    color: #343775;
+    width: 20px;
+}
+
+    ::-webkit-scrollbar-thumb {
+        background: #343775; 
+        border-radius: 10px;
+      }
+.eachTask{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
