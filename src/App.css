@@ -1,6 +1,5 @@
 #root {
   width: 100%;
-  padding: 2rem;
   display: flex;
   text-align: center;
   align-items: center;
@@ -20,11 +19,10 @@ body{
 
 
 .context {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     width: 100%;
     position: absolute;
-    top: 9vh;
-    height: 40rem;
+    height: 100%;
 }
 
 
