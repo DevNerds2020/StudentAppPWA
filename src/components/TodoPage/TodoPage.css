@@ -35,6 +35,13 @@
         height: 100%;
         background-color: transparent;
 }
+
+@media screen and (max-width: 600px) {
+    .allContainer {
+        transform: scale(0.5);
+    }
+}
+
 .textField{
 
         margin: 10px;
