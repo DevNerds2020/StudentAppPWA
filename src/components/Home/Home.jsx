@@ -5,12 +5,13 @@ import Fade from '@mui/material/Fade';
 import { Link } from 'react-router-dom';
 import { css } from '@emotion/css';
 import translation from '../../utils/translation';
-import "./Home.css"
+import './Home.css';
 
 function Home() {
   const [anchorEl, setAnchorEl] = useState(null);
   const dispatch = useDispatch();
   const { localeLanguage } = useSelector((state) => state.data);
+  const localeTime = localeLanguage === 'en' ? 'en-US' : 'fa-IR';
 
   const open = Boolean(anchorEl);
   const openMenu = (event) => {
@@ -21,7 +22,10 @@ function Home() {
   };
 
   const changeLanguage = (newLanguage) => {
-    dispatch({ type: 'CHANGE_LOCALE_LANGUAGE', payload: { localeLanguage: newLanguage } });
+    dispatch({
+      type: 'CHANGE_LOCALE_LANGUAGE',
+      payload: { localeLanguage: newLanguage },
+    });
     handleClose();
   };
   return (
@@ -30,7 +34,7 @@ function Home() {
         width: 100%;
       `}
     >
-            <Button variant="contained" onClick={openMenu}>
+      <Button variant="contained" onClick={openMenu}>
         {localeLanguage}
       </Button>
       <Menu
@@ -66,48 +70,50 @@ function Home() {
         >
           {translation[localeLanguage].highSchoolBody}
         </h2>
-        <Box className='homeAppContainer'>
-          <div className='homeRows'>
-          <Box className='iconBox'>
-            <Link className="LinkStyle" to="todo">
-              {translation[localeLanguage].todo}
-            </Link>
-          </Box>
-          <Box className='iconBox'>
-            <Link className="LinkStyle" to="exams">
-              {translation[localeLanguage].exams}
-            </Link>
-          </Box>
-          <Box className='iconBox'>
-            <Link className="LinkStyle" to="tools">
-              {translation[localeLanguage].tools}
-            </Link>
-          </Box>
+        <Box className="homeAppContainer">
+          <div className="homeRows">
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="todo">
+                {translation[localeLanguage].todo}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="exams">
+                {translation[localeLanguage].exams}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="tools">
+                {translation[localeLanguage].tools}
+              </Link>
+            </Box>
           </div>
-          <div className='homeRows'>
-          <Box className='iconBox'>
-
-            <Link className="LinkStyle" to="notes">
-              {translation[localeLanguage].notes}
-            </Link>
-          </Box>
-          <Box className='iconBox'>
-
-            <Link className="LinkStyle" to="notes">
-              {translation[localeLanguage].teachingMovies}
-            </Link>
-          </Box>
-          <Box className='iconBox'>
-
-            <Link className="LinkStyle" to="notes">
-              {translation[localeLanguage].books}
-            </Link>
-          </Box>
+          <div className="homeRows">
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="notes">
+                {translation[localeLanguage].notes}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="notes">
+                {translation[localeLanguage].teachingMovies}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="notes">
+                {translation[localeLanguage].books}
+              </Link>
+            </Box>
           </div>
-
         </Box>
+        <h2>
+          {new Date().toLocaleString(localeTime, {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+          })}
+        </h2>
       </Box>
-
     </Box>
   );
 }
