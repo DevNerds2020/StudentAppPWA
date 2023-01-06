@@ -9,6 +9,12 @@ const translation = {
     books: 'Books',
     edit: 'Edit',
     view: 'View',
+    calendar: 'Calendar',
+    translator: 'Translator',
+    aboutUs: 'About Us',
+    startExam: 'Start Exam',
+    endExam: 'End Exam',
+    timeLeft: 'Time Left',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -20,6 +26,12 @@ const translation = {
     books: 'کتاب ها',
     edit: 'ویرایش',
     view: 'مشاهده',
+    calendar: 'تقویم',
+    translator: 'ترجمه',
+    aboutUs: 'درباره ما',
+    startExam: 'شروع آزمون',
+    endExam: 'پایان آزمون',
+    timeLeft: 'زمان باقی مانده',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -31,6 +43,12 @@ const translation = {
     books: 'الكتب',
     edit: 'تحرير',
     view: 'رأي',
+    calendar: 'التقويم',
+    translator: 'مترجم',
+    aboutUs: 'معلومات عنا',
+    startExam: 'بدء الامتحان',
+    endExam: 'انهاء الامتحان',
+    timeLeft: 'الوقت المتبقي',
   },
 };
 export default translation;

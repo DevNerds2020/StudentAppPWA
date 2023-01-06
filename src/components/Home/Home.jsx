@@ -105,6 +105,23 @@ function Home() {
               </Link>
             </Box>
           </div>
+          <div className="homeRows">
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="calendar">
+                {translation[localeLanguage].calendar}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="translator">
+                {translation[localeLanguage].translator}
+              </Link>
+            </Box>
+            <Box className="iconBox">
+              <Link className="LinkStyle" to="about">
+                {translation[localeLanguage].aboutUs}
+              </Link>
+            </Box>
+          </div>
         </Box>
         <h2>
           {new Date().toLocaleString(localeTime, {

@@ -3,7 +3,7 @@ const exams = [
     id: 1,
     title: 'Exam 1',
     description: 'Exam 1 description',
-    time: 2, // minutes
+    time: 10, // minutes
     questions: [
       {
         id: 1,
@@ -15,7 +15,7 @@ const exams = [
           c: 'Answer 3',
           d: 'Answer 4',
         },
-        correctAnswer: 'a',
+        correctAnswer: 'b',
       },
       {
         id: 2,
@@ -39,6 +39,7 @@ const exams = [
           c: 'Answer 3',
           d: 'Answer 4',
         },
+        correctAnswer: 'c',
       },
     ],
   },

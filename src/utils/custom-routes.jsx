@@ -3,6 +3,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '../components/Home/Home';
 import TodoPage from '../components/TodoPage/TodoPage';
 import ExamsPage from '../components/ExampsPage/ExamsPage';
+import Translate from '../components/TranslatorPage/TranslatorPage';
+import CalendarPage from '../components/CalendarPage/CalendarPage';
+import ExamPage from '../components/ExamPage/ExamPage';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,26 @@ const router = createBrowserRouter([
   {
     path: '/exams',
     element: <ExamsPage />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/translator',
+    element: <Translate />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/calendar',
+    element: <CalendarPage />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/aboutus',
+    element: <ExamsPage />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/exam/:examId',
+    element: <ExamPage />,
     errorElement: <div>404</div>,
   },
 ]);
