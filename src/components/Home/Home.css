@@ -1,47 +1,45 @@
 @font-face {
-    font-family: 'lalezar';
-    src: url('../../assets/Lalezar-Regular.ttf');
+  font-family: 'lalezar';
+  src: url('../../assets/Lalezar-Regular.ttf');
 }
 
-.homeAppContainer{
-    background-color: #2868c1;
-    border-radius: 15px;
-    
+.homeAppContainer {
+  background-color: #2868c1;
+  border-radius: 15px;
 }
-@media screen and (max-width: 600px){
-    .homeAppContainer{
-        transform: scale(0.7);
-    }
-}
-.iconBox{
-    margin: 30px;
-    padding: 3px;
-    padding-left: -1;
-    border-radius: 10px;
-}
-.homeRows{
-    display: flex;
-}
-.LinkStyle{
-    font-family: lalezar;
-    text-decoration: none;
-    background-color: rgb(0, 153, 255);
-    color: #000000;
-    width: 150px;
-    height: 50px;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0 10px;
-    padding: 10px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.LinkStyle:hover{
-    color: #393939;
-    background-color: #f0f8ff;
-    border-radius: 10px;
-    transition: 0.5s;
+@media screen and (max-width: 600px) {
+  .homeAppContainer {
+    transform: scale(0.5);
   }
-
+}
+.iconBox {
+  margin: 30px;
+  padding: 3px;
+  padding-left: -1;
+  border-radius: 10px;
+}
+.homeRows {
+  display: flex;
+}
+.LinkStyle {
+  font-family: lalezar;
+  text-decoration: none;
+  background-color: rgb(0, 153, 255);
+  color: #000000;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LinkStyle:hover {
+  color: #393939;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  transition: 0.5s;
+}
