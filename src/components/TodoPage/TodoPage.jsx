@@ -108,7 +108,11 @@ function TodoPage() {
             ) : (
               <TextField
                 onChange={(event) => handleEditTask(event, todo.id)}
-                onKeyDown={() => onEditButtonClick(todo.id)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') {
+                    onEditButtonClick(todo.id);
+                  }
+                }}
                 variant="standard"
                 defaultValue={todo.title ?? ''}
               />
