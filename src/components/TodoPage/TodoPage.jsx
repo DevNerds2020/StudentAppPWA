@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Box, Button, IconButton, TextField } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
 import { css } from '@emotion/css';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,7 +8,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DoDisturbOnIcon from '@mui/icons-material/DoDisturbOn';
 import translation from '../../utils/translation';
 import "./TodoPage.css"
-import { flexbox } from '@mui/system';
 
 
 function TodoPage() {
@@ -26,26 +24,26 @@ function TodoPage() {
   };
 
   const addToDo = () => {
-    if(editsaver==false){
-    if (inputValue === '') return;
-    dispatch({
-      type: 'ADD_TODO',
-      payload: {
-        id: todoList.length + 1,
-        title: inputValue,
-        isDone: false,
-      },
-    });
-    console.log(editsaver)
-    setInputValue('');
-    TextFieldRef.current.focus();
-  }else{
-    dispatch({ type: 'EDIT_TASK', payload: editid,payloadText:inputValue})
-    setInputValue('');
-    TextFieldRef.current.focus();
-    setEditsaver(false)
-  }
-};
+    if (editsaver == false) {
+      if (inputValue === '') return;
+      dispatch({
+        type: 'ADD_TODO',
+        payload: {
+          id: todoList.length + 1,
+          title: inputValue,
+          isDone: false,
+        },
+      });
+      console.log(editsaver)
+      setInputValue('');
+      TextFieldRef.current.focus();
+    } else {
+      dispatch({ type: 'EDIT_TASK', payload: editid, payloadText: inputValue })
+      setInputValue('');
+      TextFieldRef.current.focus();
+      setEditsaver(false)
+    }
+  };
 
   const onKeyDownHandler = (e) => {
     if (e.key === 'Enter') {
@@ -56,7 +54,7 @@ function TodoPage() {
 
 
   const EditHandler = (taskid) => {
-    
+
     setEditsaver(true)
     const a = todoList.filter(todoList => {
       return todoList.id === taskid
@@ -66,6 +64,23 @@ function TodoPage() {
   }
 
 
+  //---------------delete-------------
+
+  const deleteHandler = (deleteId) => {
+
+    const firstHalf = todoList.slice(0, deleteId - 1)
+    const secoundHalf = todoList.slice(deleteId)
+    secoundHalf.forEach(element => {
+      element.id = element.id - 1
+    });
+
+    console.log(firstHalf)
+    console.log(secoundHalf)
+
+    const deleteDone = firstHalf.concat(secoundHalf)
+
+    dispatch({ type: 'DELETE_TODO', payload: { deleteDone } });
+  }
 
 
 
@@ -177,7 +192,8 @@ function TodoPage() {
                 }
               `}
                   onClick={() => {
-                    dispatch({ type: 'DELETE_TODO', payload: { id: todo.id } });
+                    const deleteId = todo.id
+                    deleteHandler(deleteId)
                   }}
                 >
                   <DeleteIcon

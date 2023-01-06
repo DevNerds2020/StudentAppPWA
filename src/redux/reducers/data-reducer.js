@@ -21,7 +21,7 @@ const dataReducer = (state = initialState, action) => {
     case 'DELETE_TODO':
       return {
         ...state,
-        todoList: state.todoList.filter((todo) => todo.id !== action.payload.id),
+        todoList:action.payload.deleteDone,
       };
     case 'TOGGLE_TODO':
       return {
