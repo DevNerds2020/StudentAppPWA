@@ -6,6 +6,8 @@ import configureStore, {
   saveToLocalStorage,
 } from './redux/store/configureStore';
 import router from './utils/custom-routes';
+import { Link } from 'react-router-dom';
+
 
 const store = configureStore();
 store.subscribe(() => saveToLocalStorage(store.getState()));
@@ -27,7 +29,7 @@ function App() {
           <li />
         </ul>
       </div>
-      <div className="context">
+            <div className="context">
         <Provider store={store}>
           <RouterProvider router={router} />
         </Provider>
