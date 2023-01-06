@@ -38,7 +38,11 @@ const rootReducer = combineReducers({
   data: dataReducer,
 });
 const configureStore = () => {
-  const store = createStore(rootReducer, loadFromLocalStorage(), composeEnhancers(applyMiddleware()));
+  const store = createStore(
+    rootReducer,
+    loadFromLocalStorage(),
+    composeEnhancers(applyMiddleware()),
+  );
 
   return store;
 };

@@ -7,6 +7,8 @@ const translation = {
     notes: 'Notes',
     teachingMovies: 'Teaching Movies',
     books: 'Books',
+    edit: 'Edit',
+    view: 'View',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -16,6 +18,8 @@ const translation = {
     notes: 'یادداشت ها',
     teachingMovies: 'فیلم های آموزشی',
     books: 'کتاب ها',
+    edit: 'ویرایش',
+    view: 'مشاهده',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -25,6 +29,8 @@ const translation = {
     notes: 'ملاحظات',
     teachingMovies: 'أفلام التعليم',
     books: 'الكتب',
+    edit: 'تحرير',
+    view: 'رأي',
   },
 };
 export default translation;

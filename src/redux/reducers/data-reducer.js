@@ -21,7 +21,9 @@ const dataReducer = (state = initialState, action) => {
     case 'DELETE_TODO':
       return {
         ...state,
-        todoList:action.payload.deleteDone,
+        todoList: state.todoList.filter(
+          (todo) => todo.id !== action.payload.taskId,
+        ),
       };
     case 'TOGGLE_TODO':
       return {
@@ -36,21 +38,35 @@ const dataReducer = (state = initialState, action) => {
           return todo;
         }),
       };
-      case 'EDIT_TASK':
-        return{
-          ...state,
-          todoList: state.todoList.map((todo) => {
-            if (todo.id === action.payload) {
-              return {
-                ...todo,
-                title: action.payloadText,
-              };
-            }
-            return todo;
-          }),
-        };
+    case 'EDIT_TODO':
+      return {
+        ...state,
+        todoList: state.todoList.map((todo) => {
+          if (todo.id === action.payload.taskId) {
+            return {
+              ...todo,
+              title: action.payload.value,
+            };
+          }
+          return todo;
+        }),
+      };
+    case 'CHANGE_TODO_ITEM_TO_EDIT_MODE':
+      return {
+        ...state,
+        todoList: state.todoList.map((todo) => {
+          if (todo.id === action.payload.taskId) {
+            return {
+              ...todo,
+              editMode: !todo?.editMode,
+            };
+          }
+          return todo;
+        }),
+      };
+
     default:
       return state;
-  
-}}
+  }
+};
 export default dataReducer;
