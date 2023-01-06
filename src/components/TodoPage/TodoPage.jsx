@@ -126,11 +126,7 @@ function TodoPage() {
           </Box>
 
           <h2
-            className={css`
-          color: #ff1493;
-          margin-top: 20px;
-          margin-left:20px
-        `}
+            className='title'
           >
             {translation[localeLanguage].todo}
           </h2>
@@ -144,8 +140,10 @@ function TodoPage() {
 
               <h3
                 className={css`
-                color: #ff1493;
+                overflow-wrap:break-word ;
+                color: #00000;
                 margin: 10px;
+                max-width:23rem;
                 text-decoration: ${todo.isDone ? 'line-through' : 'none'};
               `}
               >
