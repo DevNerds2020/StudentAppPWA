@@ -25,7 +25,13 @@ export default function ExamsPage() {
         flex-direction: column;
       `}
     >
-      <h2>{translation[localeLanguage].exams}</h2>
+      <h2
+        className={css`
+          margin-bottom: 20px;
+        `}
+      >
+        {translation[localeLanguage].exams}
+      </h2>
       <List
         className={css``}
         sx={{ width: '100%', maxWidth: 360, backgroundColor: '#2868c1' }}

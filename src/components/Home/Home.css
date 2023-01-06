@@ -6,7 +6,12 @@
 .homeAppContainer{
     background-color: #2868c1;
     border-radius: 15px;
-
+    
+}
+@media screen and (max-width: 600px){
+    .homeAppContainer{
+        transform: scale(0.7);
+    }
 }
 .iconBox{
     margin: 30px;
