@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
-import configureStore, { saveToLocalStorage } from './redux/store/configureStore';
+import configureStore, {
+  saveToLocalStorage,
+} from './redux/store/configureStore';
 import router from './utils/custom-routes';
 
 const store = configureStore();
