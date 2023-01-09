@@ -392,7 +392,7 @@ export default function ToolsPage() {
 
         <DialogContent
           className={css`
-            background-color: rgb(59, 59, 59);
+            background-color:  #2868c1;
           `}
         >
           <Fibonacci />
@@ -400,7 +400,7 @@ export default function ToolsPage() {
 
         <DialogActions
           className={css`
-            background-color: #676cd0;
+            background-color:#676cd0;
           `}
         >
           <Button
