@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 import Calculator from '../calculator/calculator';
-import Fibonacci from '../fibonacci/fibpnacci';
+import Fibonacci from '../fibonacci/fibonacci';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
@@ -104,7 +104,10 @@ export default function ToolsPage() {
                 {translation[localeLanguage].primeNumbersWithCounter}
               </Link>
             </Box>
-            <Box onClick={()=>{setOpenDialog('fibonacci')}}
+            <Box
+              onClick={() => {
+                setOpenDialog('fibonacci');
+              }}
               className={css`
                 cursor: pointer;
                 margin: 30px;
@@ -336,8 +339,13 @@ export default function ToolsPage() {
         </Box>
       </div>
 
-{/* ----------------calculator dialog------------------ */}
-<Dialog className={css`border-radius: 15px;`} open={openDialog === 'calculator'}>
+      {/* ----------------calculator dialog------------------ */}
+      <Dialog
+        className={css`
+          border-radius: 15px;
+        `}
+        open={openDialog === 'calculator'}
+      >
         <DialogTitle
           className={css`
             background-color: #676cd0;
@@ -373,23 +381,39 @@ export default function ToolsPage() {
 
       {/* -------------fibonacci dialoh------------ */}
 
-      <Dialog open={openDialog==='fibonacci'} >
-        <DialogTitle className={css`background-color:#676cd0;`}>{translation[localeLanguage].calculator}</DialogTitle>
+      <Dialog open={openDialog === 'fibonacci'}>
+        <DialogTitle
+          className={css`
+            background-color: #676cd0;
+          `}
+        >
+          {translation[localeLanguage].calculator}
+        </DialogTitle>
 
-        <DialogContent className={css`background-color:rgb(59, 59, 59);`}>
-        <Fibonacci/>
+        <DialogContent
+          className={css`
+            background-color: rgb(59, 59, 59);
+          `}
+        >
+          <Fibonacci />
         </DialogContent>
 
-
-
-        <DialogActions className={css`background-color:#676cd0;`} >
-          <Button variant='contained' onClick={()=>{setOpenDialog('')}} color="primary">
+        <DialogActions
+          className={css`
+            background-color: #676cd0;
+          `}
+        >
+          <Button
+            variant="contained"
+            onClick={() => {
+              setOpenDialog('');
+            }}
+            color="primary"
+          >
             {translation[localeLanguage].close}
           </Button>
         </DialogActions>
       </Dialog>
-
-
     </>
   );
 }
