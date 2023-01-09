@@ -6,6 +6,7 @@ import ExamsPage from '../components/ExampsPage/ExamsPage';
 import Translate from '../components/TranslatorPage/TranslatorPage';
 import CalendarPage from '../components/CalendarPage/CalendarPage';
 import ExamPage from '../components/ExamPage/ExamPage';
+import ToolsPage from '../components/tools/ToolsPage/toolsPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/tools',
-    element: <div>Tools</div>,
+    element: <ToolsPage/>,
     errorElement: <div>404</div>,
   },
   {

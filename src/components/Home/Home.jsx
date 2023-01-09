@@ -73,51 +73,195 @@ function Home() {
         <Box className="homeAppContainer">
           <div className="homeRows">
             <Box className="iconBox">
-              <Link className="LinkStyle" to="todo">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="todo">
                 {translation[localeLanguage].todo}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="exams">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="exams">
                 {translation[localeLanguage].exams}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="tools">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="tools">
                 {translation[localeLanguage].tools}
               </Link>
             </Box>
           </div>
           <div className="homeRows">
             <Box className="iconBox">
-              <Link className="LinkStyle" to="notes">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="notes">
                 {translation[localeLanguage].notes}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="notes">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="notes">
                 {translation[localeLanguage].teachingMovies}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="notes">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="notes">
                 {translation[localeLanguage].books}
               </Link>
             </Box>
           </div>
           <div className="homeRows">
             <Box className="iconBox">
-              <Link className="LinkStyle" to="calendar">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="calendar">
                 {translation[localeLanguage].calendar}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="translator">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="translator">
                 {translation[localeLanguage].translator}
               </Link>
             </Box>
             <Box className="iconBox">
-              <Link className="LinkStyle" to="about">
+              <Link className={css`  
+              font-family: lalezar;
+               text-decoration: none;
+               background-color: rgb(0, 153, 255);
+               color: #000000;
+                width: 150px;
+                height: 50px;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+               `} to="about">
                 {translation[localeLanguage].aboutUs}
               </Link>
             </Box>

@@ -2,6 +2,7 @@
 const initialState = {
   localeLanguage: 'fa',
   todoList: [],
+  
 };
 
 const dataReducer = (state = initialState, action) => {
