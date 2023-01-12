@@ -1,6 +1,5 @@
 import {
   Dialog,
-  DialogContentText,
   DialogTitle,
   DialogActions,
   DialogContent,
@@ -13,11 +12,12 @@ import { useState } from 'react';
 
 import Calculator from '../calculator/calculator';
 import Fibonacci from '../fibonacci/fibonacci';
+import PythagorasTriqangle from '../Pythagoras/Pythagoras';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
 
-  const [openDialog, setOpenDialog] = useState('');
+  const [openDialog, setOpenDialog] = useState('`');
   return (
     <>
       <div
@@ -239,7 +239,7 @@ export default function ToolsPage() {
             </Box>
           </div>
           <div>
-            <Box
+            <Box onClick={()=>{setOpenDialog('PythagorasTriqangle')}}
               className={css`
                 cursor: pointer;
                 margin: 30px;
@@ -392,7 +392,7 @@ export default function ToolsPage() {
 
         <DialogContent
           className={css`
-            background-color:  #2868c1;
+            background-color: #2868c1;
           `}
         >
           <Fibonacci />
@@ -400,7 +400,43 @@ export default function ToolsPage() {
 
         <DialogActions
           className={css`
-            background-color:#676cd0;
+            background-color: #676cd0;
+          `}
+        >
+          <Button
+            variant="contained"
+            onClick={() => {
+              setOpenDialog('');
+            }}
+            color="primary"
+          >
+            {translation[localeLanguage].close}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* -------------PythagorasTriqangle------------ */}
+
+      <Dialog open={openDialog === 'PythagorasTriqangle'}>
+        <DialogTitle
+          className={css`
+            background-color: #676cd0;
+          `}
+        >
+          {translation[localeLanguage].calculator}
+        </DialogTitle>
+
+        <DialogContent
+          className={css`
+            background-color: #2868c1;
+          `}
+        >
+          <PythagorasTriqangle/>
+        </DialogContent>
+
+        <DialogActions
+          className={css`
+            background-color: #676cd0;
           `}
         >
           <Button

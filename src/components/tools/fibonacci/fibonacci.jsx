@@ -9,23 +9,26 @@ export default function Fibonacci() {
 
   const [givenNumber, setGivenNumber] = useState();
   const [results, setResults] = useState();
-  console.log(givenNumber);
 
   const calculate = () => {
-    if (givenNumber < 2) {
-      setResults(1);
-    } else {
-      const a = givenNumber - 2;
-      const b = givenNumber - 1;
-      setResults(a + b);
+    console.log('Fibonacci Series:');
+    let n1 = 0,
+      n2 = 1,
+      nextTerm;
+
+    for (let i = 1; i <= givenNumber; i++) {
+      nextTerm = n1 + n2;
+      n1 = n2;
+      n2 = nextTerm;
+      setResults(nextTerm);
     }
   };
 
-  const enterHandler=(e)=>{
+  const enterHandler = (e) => {
     if (e.key === 'Enter') {
       calculate();
     }
-  }
+  };
 
   return (
     <>
@@ -44,7 +47,7 @@ export default function Fibonacci() {
           `}
         >
           <TextField
-          onKeyDown={enterHandler}
+            onKeyDown={enterHandler}
             onChange={(e) => {
               setGivenNumber(e.target.value);
             }}
