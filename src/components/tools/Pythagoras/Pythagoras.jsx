@@ -10,33 +10,51 @@ export default function PythagorasTriqangle() {
   const [sideMustBe, setSideMustBe] = useState();
 
   const sideOneHandler = (event) => {
-    if (event.keyCode === 46) {
-      setSideOne(null);
+    if (String(event.target.value) === '') {
     }
     setSideOne(event.target.value);
   };
 
   const sideTwoHandler = (event) => {
-    if (event.keyCode === 46) {
-      setSideOne(null);
-    }
     setSideTwo(event.target.value);
   };
 
   const hypotenuseHandler = (event) => {
-    if (event.keyCode === 46) {
-      setSideOne(null);
-    }
     setHypotenuse(event.target.value);
   };
 
   const thirdSideHandler = () => {
-    if (typeof hypotenuse !== 'undefined' && sideTwo !== 'undefined') {
+    console.log(sideOne);
+    if (
+      (typeof hypotenuse !== 'undefined' &&
+        typeof sideTwo !== 'undefined' &&
+        typeof sideOne === 'undefined') ||
+      (String(hypotenuse) !== '' &&
+        String(sideTwo) !== '' &&
+        String(sideOne) === '')
+    ) {
       setSideMustBe(Math.sqrt(hypotenuse * hypotenuse - sideTwo * sideTwo));
-    } else if (typeof sideOne !== 'undefined' && sideTwo !== 'undefined') {
+    } else if (
+      (typeof sideOne !== 'undefined' &&
+        typeof sideTwo !== 'undefined' &&
+        typeof hypotenuse === 'undefined') ||
+      (String(sideOne) !== '' &&
+        String(sideTwo) !== '' &&
+        String(hypotenuse) === '')
+    ) {
+      console.log('hey');
       setSideMustBe(Math.sqrt(sideOne * sideOne + sideTwo * sideTwo));
-    } else if (typeof hypotenuse !== 'undefined' && sideOne !== 'undefined') {
+    } else if (
+      (typeof hypotenuse !== 'undefined' &&
+        typeof sideOne !== 'undefined' &&
+        typeof sideTwo === 'undefined') ||
+      (String(hypotenuse) !== '' &&
+        String(sideOne) !== '' &&
+        String(sideTwo) === '')
+    ) {
       setSideMustBe(Math.sqrt(hypotenuse * hypotenuse - sideOne * sideOne));
+    } else {
+      setSideMustBe('');
     }
   };
 
@@ -44,10 +62,12 @@ export default function PythagorasTriqangle() {
     <div
       className={css`
         display: flex;
+        justify-content: center;
       `}
     >
-      <div>
-        <h3>اندازه اضلاع را وارد کنید</h3>
+      <div className={css`text-align:center;`}>
+        <h3 >.اندازه اضلاع را وارد کنید</h3>
+        <h5>(.برای ممیز از نقطه ( . ) استفاده کنید)</h5>
 
         <div
           className={css`
@@ -64,7 +84,12 @@ export default function PythagorasTriqangle() {
             ضلع اول
           </h4>
 
-          <TextField onChange={sideOneHandler} type="number"></TextField>
+          <TextField
+            label="cm"
+            onKeyDown={sideOneHandler}
+            onChange={sideOneHandler}
+            type="number"
+          ></TextField>
         </div>
         <div
           className={css`
@@ -81,7 +106,11 @@ export default function PythagorasTriqangle() {
             ضلع دوم
           </h4>
 
-          <TextField onChange={sideTwoHandler} type="number"></TextField>
+          <TextField
+            label="cm"
+            onChange={sideTwoHandler}
+            type="number"
+          ></TextField>
         </div>
 
         <div
@@ -98,7 +127,11 @@ export default function PythagorasTriqangle() {
           >
             وتر ضلع
           </h4>
-          <TextField type="number" onChange={hypotenuseHandler}></TextField>
+          <TextField
+            label="cm"
+            type="number"
+            onChange={hypotenuseHandler}
+          ></TextField>
         </div>
       </div>
       <div
@@ -119,7 +152,7 @@ export default function PythagorasTriqangle() {
           </h2>
         )}
         <Button onClick={thirdSideHandler}>محاسبه ضلع سوم</Button>
-        <h1>{sideMustBe}</h1>
+        <h3>{sideMustBe}</h3>
       </div>
     </div>
   );
