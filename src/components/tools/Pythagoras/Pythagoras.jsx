@@ -10,22 +10,22 @@ export default function PythagorasTriqangle() {
   const [sideMustBe, setSideMustBe] = useState();
 
   const sideOneHandler = (event) => {
-    if(event.keyCode === 46){
-      setSideOne(null)
+    if (event.keyCode === 46) {
+      setSideOne(null);
     }
-    setSideOne(event.target.value);  
+    setSideOne(event.target.value);
   };
 
   const sideTwoHandler = (event) => {
-    if(event.keyCode === 46){
-      setSideOne(null)
+    if (event.keyCode === 46) {
+      setSideOne(null);
     }
     setSideTwo(event.target.value);
   };
 
   const hypotenuseHandler = (event) => {
-    if(event.keyCode === 46){
-      setSideOne(null)
+    if (event.keyCode === 46) {
+      setSideOne(null);
     }
     setHypotenuse(event.target.value);
   };
@@ -35,8 +35,7 @@ export default function PythagorasTriqangle() {
       setSideMustBe(Math.sqrt(hypotenuse * hypotenuse - sideTwo * sideTwo));
     } else if (typeof sideOne !== 'undefined' && sideTwo !== 'undefined') {
       setSideMustBe(Math.sqrt(sideOne * sideOne + sideTwo * sideTwo));
-    }
-    else if(typeof hypotenuse !== 'undefined' && sideOne !== 'undefined') {
+    } else if (typeof hypotenuse !== 'undefined' && sideOne !== 'undefined') {
       setSideMustBe(Math.sqrt(hypotenuse * hypotenuse - sideOne * sideOne));
     }
   };

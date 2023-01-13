@@ -239,7 +239,10 @@ export default function ToolsPage() {
             </Box>
           </div>
           <div>
-            <Box onClick={()=>{setOpenDialog('PythagorasTriqangle')}}
+            <Box
+              onClick={() => {
+                setOpenDialog('PythagorasTriqangle');
+              }}
               className={css`
                 cursor: pointer;
                 margin: 30px;
@@ -431,7 +434,7 @@ export default function ToolsPage() {
             background-color: #2868c1;
           `}
         >
-          <PythagorasTriqangle/>
+          <PythagorasTriqangle />
         </DialogContent>
 
         <DialogActions
