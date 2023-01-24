@@ -11,12 +11,16 @@ export default function Fibonacci() {
   const [results, setResults] = useState();
 
   const calculate = () => {
-    if (givenNumber < 2) {
-      setResults(1);
-    } else {
-      const a = givenNumber - 2;
-      const b = givenNumber - 1;
-      setResults(a + b);
+    console.log('Fibonacci Series:');
+    let n1 = 0,
+      n2 = 1,
+      nextTerm;
+
+    for (let i = 1; i <= givenNumber; i++) {
+      nextTerm = n1 + n2;
+      n1 = n2;
+      n2 = nextTerm;
+      setResults(nextTerm);
     }
   };
 

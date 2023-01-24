@@ -14,11 +14,12 @@ import translation from '../../../utils/translation';
 
 import Calculator from '../calculator/calculator';
 import Fibonacci from '../fibonacci/fibonacci';
+import PythagorasTriqangle from '../Pythagoras/Pythagoras';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
 
-  const [openDialog, setOpenDialog] = useState('');
+  const [openDialog, setOpenDialog] = useState('`');
   return (
     <>
       <div
@@ -241,6 +242,9 @@ export default function ToolsPage() {
           </div>
           <div>
             <Box
+              onClick={() => {
+                setOpenDialog('PythagorasTriqangle');
+              }}
               className={css`
                 cursor: pointer;
                 margin: 30px;
@@ -397,6 +401,42 @@ export default function ToolsPage() {
           `}
         >
           <Fibonacci />
+        </DialogContent>
+
+        <DialogActions
+          className={css`
+            background-color: #676cd0;
+          `}
+        >
+          <Button
+            variant="contained"
+            onClick={() => {
+              setOpenDialog('');
+            }}
+            color="primary"
+          >
+            {translation[localeLanguage].close}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* -------------PythagorasTriqangle------------ */}
+
+      <Dialog open={openDialog === 'PythagorasTriqangle'}>
+        <DialogTitle
+          className={css`
+            background-color: #676cd0;
+          `}
+        >
+          {translation[localeLanguage].calculator}
+        </DialogTitle>
+
+        <DialogContent
+          className={css`
+            background-color: #2868c1;
+          `}
+        >
+          <PythagorasTriqangle />
         </DialogContent>
 
         <DialogActions
