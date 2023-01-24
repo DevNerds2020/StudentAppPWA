@@ -64,6 +64,7 @@ function TodoPage() {
             onChange={handleChange}
             value={inputValue}
             ref={TextFieldRef}
+            id="input"
           />
 
           <IconButton
@@ -77,6 +78,7 @@ function TodoPage() {
               }
             `}
             onClick={addToDo}
+            id="submitbutton"
           >
             <CheckIcon
               className={css`
@@ -102,6 +104,7 @@ function TodoPage() {
                   max-width: 23rem;
                   text-decoration: ${todo.isDone ? 'line-through' : 'none'};
                 `}
+                id={todo.title}
               >
                 {todo.title}
               </h3>
@@ -115,6 +118,7 @@ function TodoPage() {
                 }}
                 variant="standard"
                 defaultValue={todo.title ?? ''}
+                id="edit-field"
               />
             )}
             <div>
@@ -138,6 +142,7 @@ function TodoPage() {
                       //yellow
                       color: #ff8c00;
                     `}
+                    id="check-false"
                   />
                 ) : (
                   <CheckCircleIcon
@@ -145,6 +150,7 @@ function TodoPage() {
                       font-size: 20px;
                       color: #14ff9d;
                     `}
+                    id="check-true"
                   />
                 )}
               </IconButton>
@@ -168,6 +174,7 @@ function TodoPage() {
                     color: #ff143f;
                     height: 60px;
                   `}
+                  id="delete-button"
                 />
               </IconButton>
               <IconButton>
@@ -175,6 +182,7 @@ function TodoPage() {
                   variant="outlined"
                   color="inherit"
                   onClick={() => onEditButtonClick(todo.id)}
+                  id="edit-button"
                 >
                   {todo?.editMode
                     ? translation[localeLanguage].view
