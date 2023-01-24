@@ -1,15 +1,16 @@
 import {
   Dialog,
-  DialogContentText,
   DialogTitle,
   DialogActions,
   DialogContent,
+  Box,
+  Link,
+  Button,
 } from '@mui/material';
-import { Box, Link, Button } from '@mui/material';
 import { css } from '@emotion/css';
-import translation from '../../../utils/translation';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import translation from '../../../utils/translation';
 
 import Calculator from '../calculator/calculator';
 import Fibonacci from '../fibonacci/fibonacci';
@@ -392,7 +393,7 @@ export default function ToolsPage() {
 
         <DialogContent
           className={css`
-            background-color:  #2868c1;
+            background-color: #2868c1;
           `}
         >
           <Fibonacci />
@@ -400,7 +401,7 @@ export default function ToolsPage() {
 
         <DialogActions
           className={css`
-            background-color:#676cd0;
+            background-color: #676cd0;
           `}
         >
           <Button

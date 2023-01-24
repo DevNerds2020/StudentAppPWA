@@ -1,4 +1,6 @@
-import { useState } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/button-has-type */
+import React, { useState } from 'react';
 import './cal.css';
 
 function Calculator() {
@@ -6,71 +8,71 @@ function Calculator() {
   const [tempinput, setTempinput] = useState(0);
   const [operator, setOperator] = useState(0);
 
-  //---------------number Adder--------------
+  // ---------------number Adder--------------
 
   function keyHandler(event) {
     if (event.keyCode === 8) {
-      setMinput(minput.slice(0, -1) + '');
+      setMinput(`${minput.slice(0, -1)}`);
     } else if (event.keyCode === 48) {
       if (minput === 0) {
         setMinput('');
         setMinput(minput + 0);
       } else {
-        setMinput(minput + '0');
+        setMinput(`${minput}0`);
       }
     } else if (event.keyCode === 49) {
       if (minput === 0) {
         setMinput(minput + 1);
       } else {
-        setMinput(minput + '1');
+        setMinput(`${minput}1`);
       }
     } else if (event.keyCode === 50) {
       if (minput === 0) {
         setMinput(minput + 2);
       } else {
-        setMinput(minput + '2');
+        setMinput(`${minput}2`);
       }
     } else if (event.keyCode === 51) {
       if (minput === 0) {
         setMinput(minput + 3);
       } else {
-        setMinput(minput + '3');
+        setMinput(`${minput}3`);
       }
     } else if (event.keyCode === 52) {
       if (minput === 0) {
         setMinput(minput + 4);
       } else {
-        setMinput(minput + '4');
+        setMinput(`${minput}4`);
       }
     } else if (event.keyCode === 53) {
       if (minput === 0) {
         setMinput(minput + 5);
       } else {
-        setMinput(minput + '5');
+        setMinput(`${minput}5`);
       }
     } else if (event.keyCode === 54) {
       if (minput === 0) {
         setMinput(minput + 6);
       } else {
-        setMinput(minput + '6');
+        setMinput(`${minput}6`);
       }
     } else if (event.keyCode === 55) {
       if (minput === 0) {
         setMinput(minput + 7);
       } else {
-        setMinput(minput + '7');
+        setMinput(`${minput}7`);
       }
     } else if (event.keyCode === 56) {
       if (minput === 0) {
         setMinput(minput + 8);
       } else {
-        setMinput(minput + '8');
+        setMinput(`${minput}8`);
       }
     } else if (event.keyCode === 57) {
       if (minput === 0) {
         setMinput(minput + 9);
       } else {
-        setMinput(minput + '9');
+        setMinput(`${minput}9`);
       }
     }
   }
@@ -79,7 +81,7 @@ function Calculator() {
     if (minput === 0) {
       setMinput(minput + 1);
     } else {
-      setMinput(minput + '1');
+      setMinput(`${minput}1`);
     }
   }
 
@@ -88,7 +90,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 2);
     } else {
-      setMinput(minput + '2');
+      setMinput(`${minput}2`);
     }
   }
 
@@ -97,7 +99,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 3);
     } else {
-      setMinput(minput + '3');
+      setMinput(`${minput}3`);
     }
   }
 
@@ -106,7 +108,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 4);
     } else {
-      setMinput(minput + '4');
+      setMinput(`${minput}4`);
     }
   }
 
@@ -115,7 +117,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 5);
     } else {
-      setMinput(minput + '5');
+      setMinput(`${minput}5`);
     }
   }
 
@@ -124,7 +126,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 6);
     } else {
-      setMinput(minput + '6');
+      setMinput(`${minput}6`);
     }
   }
 
@@ -133,7 +135,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 7);
     } else {
-      setMinput(minput + '7');
+      setMinput(`${minput}7`);
     }
   }
 
@@ -142,7 +144,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 8);
     } else {
-      setMinput(minput + '8');
+      setMinput(`${minput}8`);
     }
   }
 
@@ -151,7 +153,7 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 9);
     } else {
-      setMinput(minput + '9');
+      setMinput(`${minput}9`);
     }
   }
 
@@ -160,18 +162,17 @@ function Calculator() {
       setMinput('');
       setMinput(minput + 0);
     } else {
-      setMinput(minput + '0');
+      setMinput(`${minput}0`);
     }
   }
 
   function pointHandler() {
-    if (String(minput).includes(`.`)) {
-    } else {
-      setMinput(minput + '.');
+    if (!String(minput).includes('.')) {
+      setMinput(`${minput}.`);
     }
   }
 
-  //-----------------operators---------------
+  // -----------------operators---------------
 
   function plusHandler() {
     setTempinput(tempinput + Number(minput));
@@ -205,7 +206,7 @@ function Calculator() {
     setTempinput(0);
   }
 
-  //------------results---------
+  // ------------results---------
   function eqHandler() {
     if (operator === '+') {
       setMinput(tempinput + Number(minput));
@@ -231,7 +232,7 @@ function Calculator() {
   return (
     <div onKeyDown={keyHandler} className="container">
       <div className="cal">
-        <h2 maxlength="16" className="minput">
+        <h2 maxLength="16" className="minput">
           {minput}
         </h2>
         <div>
