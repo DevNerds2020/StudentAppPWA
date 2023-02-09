@@ -37,7 +37,7 @@ export default function ExamsPage() {
         sx={{ width: '100%', maxWidth: 360, backgroundColor: '#2868c1' }}
       >
         {exams.map((exam) => (
-          <Link to={`/exam/${exam.id}`} state={{ exam }}>
+          <Link id={`exam${exam.id}`} to={`/exam/${exam.id}`} state={{ exam }}>
             <ListItem
               alignItems="center"
               className={css`

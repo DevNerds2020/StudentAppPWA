@@ -136,21 +136,25 @@ function ExamPage() {
                   onChange={(event) => handleChange(event, question.id)}
                 >
                   <FormControlLabel
+                    id="a"
                     value="a"
                     control={<Radio />}
                     label={question.answers.a}
                   />
                   <FormControlLabel
+                    id={`b${question.id}`}
                     value="b"
                     control={<Radio />}
                     label={question.answers.b}
                   />
                   <FormControlLabel
+                    id="c"
                     value="c"
                     control={<Radio />}
                     label={question.answers.c}
                   />
                   <FormControlLabel
+                    id="d"
                     value="d"
                     control={<Radio />}
                     label={question.answers.d}
@@ -185,15 +189,19 @@ function ExamPage() {
             <Box>{description}</Box>
             <Box>{`${translation[localeLanguage].timeLeft}: ${timer}`}</Box>
             {isExamOver && (
-              <CircularProgressbar
-                value={percentMarkRef.current}
-                text={`${percentMarkRef.current}%`}
-                className={css`
-                  margin-top: 3rem;
-                  width: 5rem;
-                  height: 5rem;
-                `}
-              />
+              <>
+                <CircularProgressbar
+                  id="percentMark"
+                  value={percentMarkRef.current}
+                  text={`${percentMarkRef.current}%`}
+                  className={css`
+                    margin-top: 3rem;
+                    width: 5rem;
+                    height: 5rem;
+                  `}
+                />
+                <div id="mark">{percentMarkRef.current}</div>
+              </>
             )}
           </Box>
           <Box
@@ -216,6 +224,7 @@ function ExamPage() {
               onClick={() => {
                 setIsExamOver(true);
               }}
+              id="submitExamButton"
             >
               {translation[localeLanguage].endExam}
             </Button>
@@ -229,6 +238,7 @@ function ExamPage() {
               onClick={() => {
                 setIsExamStarted(true);
               }}
+              id="startExamButton"
             >
               {translation[localeLanguage].startExam}
             </Button>
