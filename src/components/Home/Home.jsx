@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Box, Button, Menu, MenuItem } from '@mui/material';
 import Fade from '@mui/material/Fade';
-import { Link } from 'react-router-dom';
 import { css } from '@emotion/css';
 import translation from '../../utils/translation';
 import './Home.css';
+import CustomButton from './CustomButton';
 
 function Home() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -72,199 +72,46 @@ function Home() {
         </h2>
         <Box className="homeAppContainer">
           <div className="homeRows">
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="todo">
-                {translation[localeLanguage].todo}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="exams">
-                {translation[localeLanguage].exams}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="tools">
-                {translation[localeLanguage].tools}
-              </Link>
-            </Box>
+            <CustomButton
+              buttonName={translation[localeLanguage].todo}
+              link="todo"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].tools}
+              link="tools"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].exams}
+              link="exams"
+            />
           </div>
           <div className="homeRows">
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="notes">
-                {translation[localeLanguage].notes}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="notes">
-                {translation[localeLanguage].teachingMovies}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="notes">
-                {translation[localeLanguage].books}
-              </Link>
-            </Box>
+            <CustomButton
+              buttonName={translation[localeLanguage].notes}
+              link="notes"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].teachingMovies}
+              link="teachingMovies"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].books}
+              link="books"
+            />
           </div>
           <div className="homeRows">
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="calendar">
-                {translation[localeLanguage].calendar}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="translator">
-                {translation[localeLanguage].translator}
-              </Link>
-            </Box>
-            <Box className="iconBox">
-              <Link className={css`  
-              font-family: lalezar;
-               text-decoration: none;
-               background-color: rgb(0, 153, 255);
-               color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-  
-               `} to="about">
-                {translation[localeLanguage].aboutUs}
-              </Link>
-            </Box>
+            <CustomButton
+              buttonName={translation[localeLanguage].calendar}
+              link="calendar"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].translator}
+              link="translator"
+            />
+            <CustomButton
+              buttonName={translation[localeLanguage].aboutUs}
+              link="about"
+            />
           </div>
         </Box>
         <h2>

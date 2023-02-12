@@ -25,20 +25,22 @@
     padding-top: 9px;
 }
 .allContainer{
-   
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        min-width: 40rem;
-        height: 100%;
-        background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-width: 40rem;
+    height: 100%;
+    background-color: transparent;
+    
 }
 
 @media screen and (max-width: 600px) {
     .allContainer {
         transform: scale(0.5);
+        transform-origin: center left;
+        margin-left: 2rem;
     }
 }
 

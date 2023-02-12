@@ -27,13 +27,18 @@ export default function ToolsPage() {
           display: flex;
           justify-content: space-around;
           margin-top: 100px;
+          width: 100%;
+          //media query 600px
+          @media (max-width: 600px) {
+            transform: scale(0.5);
+          }
         `}
       >
         <Box
           className={css`
             display: flex;
             background-color: #2868c1;
-            width: 70%;
+            width: 50rem;
             justify-content: space-around;
           `}
         >
@@ -54,7 +59,7 @@ export default function ToolsPage() {
                 className={css`
                 cursor: pointer;
                 font-family: lalezar;
-                background-color: rgb(0, 153, 255);
+                background-color: #ffffff;
                 color: #000000;
                 width: 150px;
                 height: 50px;
@@ -88,7 +93,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -123,7 +128,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -157,7 +162,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -189,7 +194,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -221,7 +226,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -258,7 +263,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -290,7 +295,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;
@@ -305,7 +310,7 @@ export default function ToolsPage() {
                 `}
                 to="translator"
               >
-                {translation[localeLanguage].potentialDensity}
+                {translation[localeLanguage].decomposition}
               </Link>
             </Box>
             <Box
@@ -322,7 +327,7 @@ export default function ToolsPage() {
                   cursor: pointer;
                   font-family: lalezar;
                   text-decoration: none;
-                  background-color: rgb(0, 153, 255);
+                  background-color: #ffffff;
                   color: #000000;
                   width: 150px;
                   height: 50px;

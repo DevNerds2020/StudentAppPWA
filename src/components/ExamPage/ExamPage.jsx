@@ -33,6 +33,21 @@ function ExamPage() {
   const studentAnswersRef = useRef([]);
   const rowDirection = localeLanguage === 'en' ? 'row' : 'row-reverse';
 
+  const chooseRandom = (array) => {
+    const randomArray = [];
+    while (randomArray.length < 10) {
+      const randomIndex = Math.floor(Math.random() * array.length);
+      if (!randomArray.includes(array[randomIndex])) {
+        randomArray.push(array[randomIndex]);
+      }
+    }
+    return randomArray;
+  };
+
+  // pick 10 random questions if there are more than 10 questions
+  const pickedQuestions =
+    questions.length > 10 ? chooseRandom(questions) : questions;
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (isExamStarted && timer > 0 && !isExamOver) {
@@ -53,7 +68,7 @@ function ExamPage() {
   const checkAnswers = () => {
     let correctAnswers = 0;
     studentAnswersRef.current.forEach((studentAnswer) => {
-      const question = questions.find(
+      const question = pickedQuestions.find(
         (targetQuestion) => targetQuestion.id === studentAnswer.questionId,
       );
       if (question.correctAnswer === studentAnswer.answer) {
@@ -62,7 +77,7 @@ function ExamPage() {
     });
     // calculate the percentage of correct answers only two decimal places
     percentMarkRef.current =
-      Math.round((correctAnswers / questions.length) * 10000) / 100;
+      Math.round((correctAnswers / pickedQuestions.length) * 10000) / 100;
   };
 
   useEffect(() => {
@@ -88,7 +103,6 @@ function ExamPage() {
       className={css`
         display: flex;
         justify-content: space-around;
-        align-items: center;
         flex-direction: row-reverse;
         width: 100%;
         //transform the scale on small screens
@@ -120,7 +134,7 @@ function ExamPage() {
             backgroundColor: '#2868c1',
           }}
         >
-          {questions.map((question) => (
+          {pickedQuestions.map((question) => (
             <ListItem
               className={css`
                 display: flex;
@@ -174,6 +188,7 @@ function ExamPage() {
             background-color: #2868c1;
             min-width: 18rem;
             min-height: 22rem;
+            position: fixed;
           `}
         >
           <Box
