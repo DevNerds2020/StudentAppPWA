@@ -7,6 +7,7 @@ import Translate from '../components/TranslatorPage/TranslatorPage';
 import CalendarPage from '../components/CalendarPage/CalendarPage';
 import ExamPage from '../components/ExamPage/ExamPage';
 import ToolsPage from '../components/tools/ToolsPage/toolsPage';
+import Books from '../components/Books/Books';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/tools',
-    element: <ToolsPage/>,
+    element: <ToolsPage />,
     errorElement: <div>404</div>,
   },
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
   {
     path: '/aboutus',
     element: <ExamsPage />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/books',
+    element: <Books />,
     errorElement: <div>404</div>,
   },
   {
