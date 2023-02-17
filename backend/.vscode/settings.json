@@ -1,0 +1,29 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3309,
+      "driver": "MySQL",
+      "name": "databaseconnectiontest",
+      "username": "root",
+      "database": "farzanegan"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3309,
+      "driver": "MySQL",
+      "name": "databaseconnectiontest",
+      "database": "farzaneganhighschool",
+      "username": "root",
+      "password": "password"
+    }
+  ]
+}
