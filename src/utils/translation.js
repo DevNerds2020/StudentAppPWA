@@ -36,6 +36,12 @@ const translation = {
     enterRowNumber: 'Enter row number',
     generateRow: 'Generate row',
     computeDiameters: 'Compute diameters',
+    contactUs: 'Contact Us',
+    vip: 'vip',
+    signUp: 'Sign Up',
+    login: 'Login',
+    logout: 'Logout',
+    map: 'map',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -74,6 +80,12 @@ const translation = {
     enterRowNumber: 'شماره ردیف را وارد کنید',
     generateRow: 'تولید ردیف',
     computeDiameters: 'محاسبه قطر ها',
+    contactUs: 'تماس با ما',
+    vip: 'ویژه',
+    signUp: 'ثبت نام',
+    login: 'ورود',
+    logout: 'خروج',
+    map: 'نقشه',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -112,6 +124,12 @@ const translation = {
     enterRowNumber: 'أدخل رقم الصف',
     generateRow: 'توليد صف',
     computeDiameters: 'حساب الأقطار',
+    contactUs: 'اتصل بنا',
+    vip: 'خاص',
+    signUp: 'سجل',
+    login: 'تسجيل الدخول',
+    logout: 'الخروج',
+    map: 'خريطة',
   },
 };
 export default translation;
