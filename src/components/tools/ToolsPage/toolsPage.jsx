@@ -1,465 +1,78 @@
-import {
-  Dialog,
-  DialogTitle,
-  DialogActions,
-  DialogContent,
-  Box,
-  Link,
-  Button,
-} from '@mui/material';
-import { css } from '@emotion/css';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import React, { useState } from 'react';
+import { Box } from '@mui/material';
+import { css } from '@emotion/css';
 import translation from '../../../utils/translation';
 
 import Calculator from '../calculator/calculator';
 import Fibonacci from '../fibonacci/fibonacci';
 import PythagorasTriqangle from '../Pythagoras/Pythagoras';
+import ToolButton from './ToolButton';
+import Angle from '../angle/Angle';
+import NumberDecomposer from '../NumberDecomposer/NumberDecomposer';
+import KhayyamTriangleRow from '../KhayyamTriangleRow/KhayyamTriangleRow';
+import PolygonDiameters from '../PolygonDiameters/PolygonDiameters';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
 
-  const [openDialog, setOpenDialog] = useState('`');
   return (
-    <>
-      <div
+    <div
+      className={css`
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+        width: 100%;
+        //media query 600px
+        @media (max-width: 600px) {
+          transform: scale(0.5);
+        }
+      `}
+    >
+      <Box
         className={css`
           display: flex;
+          background-color: #2868c1;
+          width: 50rem;
           justify-content: space-around;
-          margin-top: 100px;
-          width: 100%;
-          //media query 600px
-          @media (max-width: 600px) {
-            transform: scale(0.5);
-          }
         `}
       >
-        <Box
-          className={css`
-            display: flex;
-            background-color: #2868c1;
-            width: 50rem;
-            justify-content: space-around;
-          `}
-        >
-          <div>
-            <Box
-              onClick={() => {
-                setOpenDialog('calculator');
-              }}
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                cursor: pointer;
-                font-family: lalezar;
-                background-color: #ffffff;
-                color: #000000;
-                width: 150px;
-                height: 50px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0 10px;
-                padding: 10px;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                t
-              `}
-                to="todo"
-              >
-                {translation[localeLanguage].calculator}
-              </Link>
-            </Box>
-
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="exams"
-              >
-                {translation[localeLanguage].primeNumbersWithCounter}
-              </Link>
-            </Box>
-            <Box
-              onClick={() => {
-                setOpenDialog('fibonacci');
-              }}
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="tools"
-              >
-                {translation[localeLanguage].fibonacci}
-              </Link>
-            </Box>
-          </div>
-          <div>
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="notes"
-              >
-                {translation[localeLanguage].angle}
-              </Link>
-            </Box>
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="notes"
-              >
-                {translation[localeLanguage].khayyamTriangle}
-              </Link>
-            </Box>
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="notes"
-              >
-                {translation[localeLanguage].numberOfDiameters}
-              </Link>
-            </Box>
-          </div>
-          <div>
-            <Box
-              onClick={() => {
-                setOpenDialog('PythagorasTriqangle');
-              }}
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="calendar"
-              >
-                {translation[localeLanguage].pythagoras}
-              </Link>
-            </Box>
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="translator"
-              >
-                {translation[localeLanguage].decomposition}
-              </Link>
-            </Box>
-            <Box
-              className={css`
-                cursor: pointer;
-                margin: 30px;
-                padding: 3px;
-                padding-left: -1;
-                border-radius: 10px;
-              `}
-            >
-              <Link
-                className={css`
-                  cursor: pointer;
-                  font-family: lalezar;
-                  text-decoration: none;
-                  background-color: #ffffff;
-                  color: #000000;
-                  width: 150px;
-                  height: 50px;
-                  font-size: 25px;
-                  font-weight: bold;
-                  margin: 0 10px;
-                  padding: 10px;
-                  border-radius: 15px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                `}
-                to="about"
-              >
-                {translation[localeLanguage].unitConversion}
-              </Link>
-            </Box>
-          </div>
-        </Box>
-      </div>
-
-      {/* ----------------calculator dialog------------------ */}
-      <Dialog
-        className={css`
-          border-radius: 15px;
-        `}
-        open={openDialog === 'calculator'}
-      >
-        <DialogTitle
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          {translation[localeLanguage].calculator}
-        </DialogTitle>
-
-        <DialogContent
-          className={css`
-            background-color: black;
-          `}
-        >
-          <Calculator />
-        </DialogContent>
-
-        <DialogActions
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          <Button
-            variant="contained"
-            onClick={() => {
-              setOpenDialog('');
-            }}
-            color="primary"
+        <div>
+          <ToolButton name={translation[localeLanguage].calculator}>
+            <Calculator />
+          </ToolButton>
+          <ToolButton
+            name={translation[localeLanguage].primeNumbersWithCounter}
           >
-            {translation[localeLanguage].close}
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-      {/* -------------fibonacci dialoh------------ */}
-
-      <Dialog open={openDialog === 'fibonacci'}>
-        <DialogTitle
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          {translation[localeLanguage].calculator}
-        </DialogTitle>
-
-        <DialogContent
-          className={css`
-            background-color: #2868c1;
-          `}
-        >
-          <Fibonacci />
-        </DialogContent>
-
-        <DialogActions
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          <Button
-            variant="contained"
-            onClick={() => {
-              setOpenDialog('');
-            }}
-            color="primary"
-          >
-            {translation[localeLanguage].close}
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-      {/* -------------PythagorasTriqangle------------ */}
-
-      <Dialog open={openDialog === 'PythagorasTriqangle'}>
-        <DialogTitle
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          {translation[localeLanguage].calculator}
-        </DialogTitle>
-
-        <DialogContent
-          className={css`
-            background-color: #2868c1;
-          `}
-        >
-          <PythagorasTriqangle />
-        </DialogContent>
-
-        <DialogActions
-          className={css`
-            background-color: #676cd0;
-          `}
-        >
-          <Button
-            variant="contained"
-            onClick={() => {
-              setOpenDialog('');
-            }}
-            color="primary"
-          >
-            {translation[localeLanguage].close}
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </>
+            <Fibonacci />
+          </ToolButton>
+          <ToolButton name={translation[localeLanguage].fibonacci}>
+            <Fibonacci />
+          </ToolButton>
+        </div>
+        <div>
+          <ToolButton name={translation[localeLanguage].angle}>
+            <Angle />
+          </ToolButton>
+          <ToolButton name={translation[localeLanguage].khayyamTriangle}>
+            <KhayyamTriangleRow />
+          </ToolButton>
+          <ToolButton name={translation[localeLanguage].numberOfDiameters}>
+            <PolygonDiameters />
+          </ToolButton>
+        </div>
+        <div>
+          <ToolButton name={translation[localeLanguage].pythagoras}>
+            <PythagorasTriqangle />
+          </ToolButton>
+          <ToolButton name={translation[localeLanguage].decomposition}>
+            <NumberDecomposer />
+          </ToolButton>
+          <ToolButton name={translation[localeLanguage].unitConversion}>
+            <Fibonacci />
+          </ToolButton>
+        </div>
+      </Box>
+    </div>
   );
 }

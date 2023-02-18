@@ -28,6 +28,14 @@ const translation = {
     close: 'Close',
     whichFibonnaciNumber: 'Which fibonnaci number do you want to see',
     calculate: 'Calculate',
+    degree: {
+      enterTheNumberOfSides: 'Enter the number of sides',
+      theDegreeOfEachSide: 'The degree of each side',
+    },
+    enterANumber: 'Enter a number',
+    enterRowNumber: 'Enter row number',
+    generateRow: 'Generate row',
+    computeDiameters: 'Compute diameters',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -58,6 +66,14 @@ const translation = {
     close: 'بستن',
     whichFibonnaciNumber: 'چندمین عدد فیبوناچی را میخواهید ببینید؟',
     calculate: 'محاسبه',
+    degree: {
+      enterTheNumberOfSides: ' تعداد طرف ها را وارد کنید',
+      theDegreeOfEachSide: ' درجه هر طرف',
+    },
+    enterANumber: 'یک عدد وارد کنید',
+    enterRowNumber: 'شماره ردیف را وارد کنید',
+    generateRow: 'تولید ردیف',
+    computeDiameters: 'محاسبه قطر ها',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -88,6 +104,14 @@ const translation = {
     close: 'أغلق',
     whichFibonnaciNumber: 'ما هو رقم فيبوناتشي الذي تريد رؤيته',
     calculate: 'الحوسبة',
+    degree: {
+      enterTheNumberOfSides: ' أدخل عدد الجوانب',
+      theDegreeOfEachSide: ' درجة كل جانب',
+    },
+    enterANumber: 'أدخل رقما',
+    enterRowNumber: 'أدخل رقم الصف',
+    generateRow: 'توليد صف',
+    computeDiameters: 'حساب الأقطار',
   },
 };
 export default translation;

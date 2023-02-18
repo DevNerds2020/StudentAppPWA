@@ -2395,6 +2395,11 @@ prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, pr
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+proptypes@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proptypes/-/proptypes-1.1.0.tgz#78b3828a5aa6bb1308939e0de3c6044dfd4bd239"
+  integrity sha512-589N0gHNvg6ocCDia1knxMwguEcZq1qyD8fVxFZEdZP0YKI+GTHyflsJH2mYE0YZbo1KNj5W8avdSR4iJDV+fw==
+
 proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
