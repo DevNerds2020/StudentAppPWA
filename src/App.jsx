@@ -30,8 +30,8 @@ function App() {
       </div>
       <div className="context">
         <Provider store={store}>
-          <Navbar />
           <RouterProvider router={router} />
+          <Navbar />
         </Provider>
       </div>
     </>

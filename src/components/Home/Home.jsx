@@ -32,6 +32,7 @@ function Home() {
     <Box
       className={css`
         width: 100%;
+        height: 100%;
       `}
     >
       <Button variant="contained" onClick={openMenu}>

@@ -39,7 +39,7 @@
 @media screen and (max-width: 600px) {
     .allContainer {
         transform: scale(0.5);
-        transform-origin: center left;
+        transform-origin: center;
         margin-left: 2rem;
     }
 }

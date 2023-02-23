@@ -9,7 +9,7 @@ function NavItem(props) {
     <Box
       className={css`
         display: flex;
-        margin: 1rem;
+        padding-right: 1.5rem;
         flex-wrap: wrap;
         cursor: pointer;
         &:hover {

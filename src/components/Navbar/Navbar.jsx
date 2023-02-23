@@ -15,10 +15,14 @@ function Navbar() {
         flex-direction: column;
         color: #000;
         font-size: 3vh;
-        position: absolute;
-        top: 0;
+        width: 44vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        bottom: 0;
+        position: fixed;
         @media (max-width: 600px){
-          font-size: 1vh;
+          font-size: 1.5vh;
         }
       `}
     >
