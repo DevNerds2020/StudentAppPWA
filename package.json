@@ -34,6 +34,7 @@
     "react-persian-datepicker": "^3.0.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
+    "react-rte": "^0.16.5",
     "reactjs-persian-calendar": "^1.1.7",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",

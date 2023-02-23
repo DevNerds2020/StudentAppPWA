@@ -71,6 +71,13 @@ function Home() {
         >
           {translation[localeLanguage].highSchoolBody}
         </h2>
+        <h2>
+          {new Date().toLocaleString(localeTime, {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+          })}
+        </h2>
         <Box className="homeAppContainer">
           <div className="homeRows">
             <CustomButton
@@ -115,13 +122,6 @@ function Home() {
             />
           </div>
         </Box>
-        <h2>
-          {new Date().toLocaleString(localeTime, {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-          })}
-        </h2>
       </Box>
     </Box>
   );

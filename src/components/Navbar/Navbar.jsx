@@ -15,12 +15,12 @@ function Navbar() {
         flex-direction: column;
         color: #000;
         font-size: 3vh;
-        width: 44vh;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         bottom: 0;
-        position: fixed;
+        position: absolute;
+        width: 30rem;
         @media (max-width: 600px){
           font-size: 1.5vh;
         }
