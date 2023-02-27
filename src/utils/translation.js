@@ -42,6 +42,13 @@ const translation = {
     login: 'Login',
     logout: 'Logout',
     map: 'map',
+    mathTweets: 'Math Tweets',
+    anyTextOutsideOfMathConceptsWillHaveLegalIssues:
+      'Any text outside of math concepts will have legal issues',
+    isPrimeNumber: 'Is Prime Number',
+    isNotPrimeNumber: 'Is Not Prime Number',
+    addNote: 'Add Note',
+    enterYourNoteName: 'Enter your note name',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -86,6 +93,13 @@ const translation = {
     login: 'ورود',
     logout: 'خروج',
     map: 'نقشه',
+    mathTweets: 'توییت های ریاضی',
+    anyTextOutsideOfMathConceptsWillHaveLegalIssues:
+      'هر متن خارج از مفاهیم ریاضی مشکل حقوقی دارد',
+    isPrimeNumber: 'عدد اول است',
+    isNotPrimeNumber: 'عدد اول نیست',
+    addNote: 'افزودن یادداشت',
+    enterYourNoteName: 'نام یادداشت خود را وارد کنید',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -130,6 +144,13 @@ const translation = {
     login: 'تسجيل الدخول',
     logout: 'الخروج',
     map: 'خريطة',
+    mathTweets: 'تغريدات رياضية',
+    anyTextOutsideOfMathConceptsWillHaveLegalIssues:
+      'أي نص خارج مفاهيم الرياضيات سيكون لديه مشاكل قانونية',
+    isPrimeNumber: 'هو عدد أول',
+    isNotPrimeNumber: 'ليس عددا أولا',
+    addNote: 'إضافة ملاحظة',
+    enterYourNoteName: 'أدخل اسم ملاحظتك',
   },
 };
 export default translation;

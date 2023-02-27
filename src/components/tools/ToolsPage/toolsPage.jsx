@@ -12,6 +12,7 @@ import Angle from '../angle/Angle';
 import NumberDecomposer from '../NumberDecomposer/NumberDecomposer';
 import KhayyamTriangleRow from '../KhayyamTriangleRow/KhayyamTriangleRow';
 import PolygonDiameters from '../PolygonDiameters/PolygonDiameters';
+import PrimeNumber from '../CheckPrime/CheckPrime';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
@@ -22,6 +23,7 @@ export default function ToolsPage() {
         display: flex;
         justify-content: space-around;
         margin-top: 100px;
+        margin-bottom: 100px;
         width: 100%;
         //media query 600px
         @media (max-width: 600px) {
@@ -44,7 +46,7 @@ export default function ToolsPage() {
           <ToolButton
             name={translation[localeLanguage].primeNumbersWithCounter}
           >
-            <Fibonacci />
+            <PrimeNumber />
           </ToolButton>
           <ToolButton name={translation[localeLanguage].fibonacci}>
             <Fibonacci />

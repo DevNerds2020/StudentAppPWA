@@ -9,6 +9,7 @@ import ExamPage from '../components/ExamPage/ExamPage';
 import ToolsPage from '../components/tools/ToolsPage/toolsPage';
 import Books from '../components/Books/Books';
 import Notes from '../components/Notes/Notes';
+import PointTweets from '../components/PointTweets/PointTweets';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
   {
     path: '/notes',
     element: <Notes />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/mathtweets',
+    element: <PointTweets />,
     errorElement: <div>404</div>,
   },
   {

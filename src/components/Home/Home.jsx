@@ -117,8 +117,8 @@ function Home() {
               link="translator"
             />
             <CustomButton
-              buttonName={translation[localeLanguage].aboutUs}
-              link="about"
+              buttonName={translation[localeLanguage].mathTweets}
+              link="mathtweets"
             />
           </div>
         </Box>

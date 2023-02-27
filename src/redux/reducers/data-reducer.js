@@ -2,7 +2,8 @@
 const initialState = {
   localeLanguage: 'fa',
   todoList: [],
-  
+  notesList: [],
+  tweetsList: [],
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -64,6 +65,26 @@ const dataReducer = (state = initialState, action) => {
           }
           return todo;
         }),
+      };
+
+    case 'ADD_TWEET':
+      return {
+        ...state,
+        tweetsList: [...state.tweetsList, action.payload],
+      };
+
+    case 'DELETE_TWEET':
+      return {
+        ...state,
+        tweetsList: state.tweetsList.filter(
+          (tweet) => tweet.id !== action.payload.tweetId,
+        ),
+      };
+
+    case 'ADD_NOTE':
+      return {
+        ...state,
+        notesList: [...state.notesList, action.payload],
       };
 
     default:
