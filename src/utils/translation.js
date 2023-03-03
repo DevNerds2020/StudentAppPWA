@@ -49,6 +49,11 @@ const translation = {
     isNotPrimeNumber: 'Is Not Prime Number',
     addNote: 'Add Note',
     enterYourNoteName: 'Enter your note name',
+    name: 'Name',
+    email: 'Email',
+    password: 'Password',
+    cancel: 'Cancel',
+    ok: 'Ok',
   },
   fa: {
     highSchoolBody: 'بهترین دوستتان در دبیرستان',
@@ -100,6 +105,11 @@ const translation = {
     isNotPrimeNumber: 'عدد اول نیست',
     addNote: 'افزودن یادداشت',
     enterYourNoteName: 'نام یادداشت خود را وارد کنید',
+    name: 'نام',
+    email: 'ایمیل',
+    password: 'رمز عبور',
+    cancel: 'لغو',
+    ok: 'تایید',
   },
   ar: {
     highSchoolBody: 'صديقك في المدرسة الثانوية',
@@ -151,6 +161,11 @@ const translation = {
     isNotPrimeNumber: 'ليس عددا أولا',
     addNote: 'إضافة ملاحظة',
     enterYourNoteName: 'أدخل اسم ملاحظتك',
+    name: 'اسم',
+    email: 'البريد الإلكتروني',
+    password: 'كلمه السر',
+    cancel: 'إلغاء',
+    ok: 'حسنا',
   },
 };
 export default translation;
