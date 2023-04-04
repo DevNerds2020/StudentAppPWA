@@ -53,7 +53,119 @@ function Books() {
                   color: #000;
                 `}
               >
-                Riyazi Takmili
+                ریاضی تکمیلی هفتم
+              </Typography>
+            </ListItem>
+          </a>
+          <a href="./src/assets/pdf/Reyazi8.pdf">
+            <ListItem
+              alignItems="center"
+              className={css`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                  color: #393939;
+                  background-color: #f0f8ff;
+                  border-radius: 10px;
+                  transition: 0.5s;
+                }
+              `}
+            >
+              <ListItemAvatar>
+                <Avatar alt="book" src="./src/assets/pdf/riyazihashtom.jpg" />
+              </ListItemAvatar>
+              <Typography
+                className={css`
+                  color: #000;
+                `}
+              >
+                ریاضی هشتم
+              </Typography>
+            </ListItem>
+          </a>
+          <a href="./src/assets/pdf/takmili8.pdf">
+            <ListItem
+              alignItems="center"
+              className={css`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                  color: #393939;
+                  background-color: #f0f8ff;
+                  border-radius: 10px;
+                  transition: 0.5s;
+                }
+              `}
+            >
+              <ListItemAvatar>
+                <Avatar alt="book" src="./src/assets/pdf/riyazitakmili.png" />
+              </ListItemAvatar>
+              <Typography
+                className={css`
+                  color: #000;
+                `}
+              >
+                ریاضی تکمیلی هشتم
+              </Typography>
+            </ListItem>
+          </a>
+          <a href="./src/assets/pdf/Reyazi9.pdf">
+            <ListItem
+              alignItems="center"
+              className={css`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                  color: #393939;
+                  background-color: #f0f8ff;
+                  border-radius: 10px;
+                  transition: 0.5s;
+                }
+              `}
+            >
+              <ListItemAvatar>
+                <Avatar alt="book" src="./src/assets/pdf/riyazinohom.jpg" />
+              </ListItemAvatar>
+              <Typography
+                className={css`
+                  color: #000;
+                `}
+              >
+                ریاضی نهم
+              </Typography>
+            </ListItem>
+          </a>
+          <a href="./src/assets/pdf/takmili9.pdf">
+            <ListItem
+              alignItems="center"
+              className={css`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                  color: #393939;
+                  background-color: #f0f8ff;
+                  border-radius: 10px;
+                  transition: 0.5s;
+                }
+              `}
+            >
+              <ListItemAvatar>
+                <Avatar alt="book" src="./src/assets/pdf/riyazitakmili.png" />
+              </ListItemAvatar>
+              <Typography
+                className={css`
+                  color: #000;
+                `}
+              >
+                ریاضی تکمیلی نهم
               </Typography>
             </ListItem>
           </a>

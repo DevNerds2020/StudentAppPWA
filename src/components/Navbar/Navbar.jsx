@@ -8,7 +8,7 @@ import NavItem from './NavItem';
 import translation from '../../utils/translation';
 import LoginDialog from '../LoginDialog/LoginDialog';
 import SignUpDialog from '../SignUpDialog/SignUpDialog';
-import AboutUs from '../AboutUs/AboutUs';
+import InfoDialog from '../InfoDialog/InfoDialog';
 
 function Navbar() {
   const localeLanguage = useSelector((state) => state.data.localeLanguage);
@@ -51,7 +51,9 @@ function Navbar() {
         <div onClick={() => setOpenDialog('about')}>
           <NavItem>{translation[localeLanguage].aboutUs}</NavItem>
         </div>
-        <NavItem>{translation[localeLanguage].contactUs}</NavItem>
+        <div onClick={() => setOpenDialog('contact')}>
+          <NavItem>{translation[localeLanguage].contactUs}</NavItem>
+        </div>
         <NavItem>{translation[localeLanguage].map}</NavItem>
         <NavItem>{translation[localeLanguage].vip}</NavItem>
         <div onClick={() => setOpenDialog('signup')}>
@@ -66,7 +68,16 @@ function Navbar() {
           closeDialog={closeDialog}
           open={openDialog === 'signup'}
         />
-        <AboutUs closeDialog={closeDialog} open={openDialog === 'about'} />
+        <InfoDialog
+          closeDialog={closeDialog}
+          open={openDialog === 'about' || openDialog === 'contact'}
+          title={
+            openDialog === 'about'
+              ? `${translation[localeLanguage].aboutUs}`
+              : `${translation[localeLanguage].contactUs}`
+          }
+          isContact={openDialog === 'contact'}
+        />
       </Box>
     </Box>
   );

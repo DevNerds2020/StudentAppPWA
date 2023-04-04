@@ -10,6 +10,7 @@ import ToolsPage from '../components/tools/ToolsPage/toolsPage';
 import Books from '../components/Books/Books';
 import Notes from '../components/Notes/Notes';
 import PointTweets from '../components/PointTweets/PointTweets';
+import MoviesPage from '../components/MoviesPage/MoviesPage';
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,11 @@ const router = createBrowserRouter([
   {
     path: '/exam/:examId',
     element: <ExamPage />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: '/teachingMovies',
+    element: <MoviesPage />,
     errorElement: <div>404</div>,
   },
 ]);
