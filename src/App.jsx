@@ -6,7 +6,6 @@ import configureStore, {
   saveToLocalStorage,
 } from './redux/store/configureStore';
 import router from './utils/custom-routes';
-import Navbar from './components/Navbar/Navbar';
 
 const store = configureStore();
 store.subscribe(() => saveToLocalStorage(store.getState()));
@@ -31,7 +30,6 @@ function App() {
       <div className="context">
         <Provider store={store}>
           <RouterProvider router={router} />
-          <Navbar />
         </Provider>
       </div>
     </>

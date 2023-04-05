@@ -28,9 +28,9 @@ function Navbar() {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        bottom: 0;
-        position: absolute;
-        width: 30rem;
+        top: 0;
+        position: fixed;
+        min-width: 50vh;
         @media (max-width: 600px){
           font-size: 1.5vh;
         }

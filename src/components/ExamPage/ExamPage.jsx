@@ -71,7 +71,7 @@ function ExamPage() {
       const question = pickedQuestions.find(
         (targetQuestion) => targetQuestion.id === studentAnswer.questionId,
       );
-      if (question.correctAnswer === studentAnswer.answer) {
+      if (question?.correctAnswer === studentAnswer.answer) {
         correctAnswers += 1;
       }
     });
@@ -104,11 +104,15 @@ function ExamPage() {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
+        background-color: #2868c1;
         width: 100%;
-        //transform the scale on small screens
+        max-height: 90vh;
+        overflow: auto;
         @media (max-width: 768px) {
-          transform: scale(0.4);
+          transform: scale(0.7);
+          padding: 20vh;
         }
+        //transform the scale on small screens
       `}
     >
       <Box
@@ -117,7 +121,6 @@ function ExamPage() {
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          background-color: #2868c1;
           //if exam is not started then background is fully blurred
           //if exam is started then background is not blurred
           filter: blur(${isExamStarted ? '0px' : '5px'});

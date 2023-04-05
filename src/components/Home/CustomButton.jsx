@@ -17,9 +17,9 @@ function CustomButton(props) {
           text-decoration: none;
           background-color: #8f94fb;
           color: #000000;
-          width: 150px;
-          height: 50px;
-          font-size: 25px;
+          width: 20vh;
+          height: 5vh;
+          font-size: 15px;
           font-weight: bold;
           margin: 0 10px;
           padding: 10px;

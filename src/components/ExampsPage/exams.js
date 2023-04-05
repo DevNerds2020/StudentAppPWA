@@ -347,7 +347,7 @@ const exams = [
     id: 2,
     title: 'Exam 2',
     description: 'Exam 2 description',
-    time: 2, // minutes
+    time: 30, // seconds
     questions: [
       {
         id: 1,
@@ -383,6 +383,7 @@ const exams = [
           c: 'Answer 3',
           d: 'Answer 4',
         },
+        correctAnswer: 'b',
       },
     ],
   },

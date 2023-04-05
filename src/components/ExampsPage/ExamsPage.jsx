@@ -34,7 +34,11 @@ export default function ExamsPage() {
       </h2>
       <List
         className={css``}
-        sx={{ width: '100%', maxWidth: 360, backgroundColor: '#2868c1' }}
+        sx={{
+          width: '100%',
+          maxWidth: 360,
+          backgroundColor: '#2868c1',
+        }}
       >
         {exams.map((exam) => (
           <Link id={`exam${exam.id}`} to={`/exam/${exam.id}`} state={{ exam }}>
