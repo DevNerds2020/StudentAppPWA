@@ -40,7 +40,6 @@ function InfoDialog(props) {
           justify-content: center;
           align-items: center;
           background-color: #8f94fb;
-          width: 30rem;
         `}
       >
         {!isContact && (
