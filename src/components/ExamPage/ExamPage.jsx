@@ -127,9 +127,7 @@ function ExamPage() {
         `}
       >
         <List
-          className={css`
-          direction: ${localeLanguage} === 'en' ? ltr : rtl;
-        `}
+          direction={localeLanguage === 'en' ? 'ltr' : 'rtl'}
           sx={{
             width: '100%',
             minHeight: '30rem',

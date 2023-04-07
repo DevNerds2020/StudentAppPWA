@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
@@ -9,6 +11,7 @@ import translation from '../../utils/translation';
 import LoginDialog from '../LoginDialog/LoginDialog';
 import SignUpDialog from '../SignUpDialog/SignUpDialog';
 import InfoDialog from '../InfoDialog/InfoDialog';
+import MapDialog from '../InfoDialog/MapDialog';
 
 function Navbar() {
   const localeLanguage = useSelector((state) => state.data.localeLanguage);
@@ -23,7 +26,7 @@ function Navbar() {
   return (
     <Box
       className={css`
-        display: flex
+        display: flex;
         flex-direction: column;
         color: #000;
         font-size: 3vh;
@@ -56,8 +59,14 @@ function Navbar() {
         <div onClick={() => setOpenDialog('contact')}>
           <NavItem>{translation[localeLanguage].contactUs}</NavItem>
         </div>
-        <NavItem>{translation[localeLanguage].map}</NavItem>
-        <NavItem>{translation[localeLanguage].vip}</NavItem>
+        <div onClick={() => setOpenDialog('map')}>
+          <NavItem>{translation[localeLanguage].map}</NavItem>
+        </div>
+        <div onClick={() => setOpenDialog('vip')}>
+          <NavItem>
+            {translation[localeLanguage].vip}
+          </NavItem>
+        </div>
         {!user.username && (
           <>
             <div onClick={() => setOpenDialog('signup')}>
@@ -90,13 +99,18 @@ function Navbar() {
           closeDialog={closeDialog}
           open={openDialog === 'signup'}
         />
+        <MapDialog open={openDialog === 'map'} closeDialog={closeDialog} />
         <InfoDialog
           closeDialog={closeDialog}
-          open={openDialog === 'about' || openDialog === 'contact'}
+          open={
+            openDialog === 'about'
+            || openDialog === 'contact'
+            || openDialog === 'vip'
+          }
           title={
             openDialog === 'about'
               ? `${translation[localeLanguage].aboutUs}`
-              : `${translation[localeLanguage].contactUs}`
+              : openDialog === 'contact' ? `${translation[localeLanguage].contactUs}` : 'VIP'
           }
           isContact={openDialog === 'contact'}
         />

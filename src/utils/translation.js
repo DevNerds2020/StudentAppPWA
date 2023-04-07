@@ -165,7 +165,6 @@ const translation = {
     generateRow: 'توليد صف',
     computeDiameters: 'حساب الأقطار',
     contactUs: 'اتصل بنا',
-    vip: 'خاص',
     signUp: 'سجل',
     login: 'تسجيل الدخول',
     logout: 'الخروج',

@@ -122,7 +122,7 @@ function Home() {
                 link="translator"
               />
               <CustomButton
-                buttonName={translation[localeLanguage].mathTweets}
+                buttonName={`*(vip)*${translation[localeLanguage].mathTweets}`}
                 link="mathtweets"
               />
             </div>

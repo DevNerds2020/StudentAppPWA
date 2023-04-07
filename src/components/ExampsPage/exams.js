@@ -387,5 +387,356 @@ const exams = [
       },
     ],
   },
+  {
+    id: 3,
+    title: 'ninth grade',
+    description: 'ninth grade description',
+    time: 30, // seconds
+    questions: [
+      {
+        title: 'Question 1',
+        description: '……نماد علمی عدد 1401 برابر است با',
+        answers: {
+          a: '14×10^3',
+          b: '14×10^(-3)',
+          c: '1/401×10^3',
+          d: '1/401×10^(-3)',
+        },
+        correctAnswer: 'c',
+      },
+      {
+        title: 'Question 2',
+        description: 'کدام یک از عبارت های زیر گویا نیست؟',
+        answers: {
+          a: '5',
+          b: '3x^2',
+          c: '9',
+          d: '1/√x',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 3',
+        description: ' با کدام گزینه برابر است؟ 〖(-2)〗^(-2) عبارت ',
+        answers: {
+          a: '1/(-4)',
+          b: '4',
+          c: '-4',
+          d: '1/4',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 4',
+        description: 'کدام گزینه از بقیه بزرگتر است؟',
+        answers: {
+          a: '〖(-2)〗^(-3)',
+          b: '〖(-2)〗^3',
+          c: '(〖(-1)/2)〗^(-4)',
+          d: '(〖(-1)/2)〗^4',
+        },
+        correctAnswer: 'c',
+      },
+      {
+        title: 'Question 5',
+        description:
+          ' چقدر است؟(y)متغیر به نسبت10x^7 y^3+2x^4 y^2-7x^3 y^5 عبارت درجه',
+        answers: {
+          a: '5',
+          b: '8',
+          c: '10',
+          d: '7',
+        },
+        correctAnswer: 'a',
+      },
+      {
+        title: 'Question 6',
+        description:
+          ' کدام گزینه است؟ √(a^2 )+√(b^2 )    حاصل باشد و منفی a مثبت وb اگر',
+        answers: {
+          a: 'a-b',
+          b: 'a+b',
+          c: '-a+b',
+          d: '-a-b',
+        },
+        correctAnswer: 'c',
+      },
+      {
+        title: 'Question 7',
+        description: 'ک مجموعه هشت عضوی چند زیر مجموعه چهار عضوی دارد؟',
+        answers: {
+          a: '84',
+          b: '70',
+          c: '42',
+          d: 'نمیتوان مشخص کرد',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 8',
+        description:
+          'اگر به عضو های یک مجموعه سه عضو اضافه شود تعداد زیر مجموعه های ان چند برابر میشود',
+        answers: {
+          a: '2',
+          b: '3',
+          c: '8',
+          d: '16',
+        },
+        correctAnswer: 'c',
+      },
+      {
+        title: 'Question 9',
+        description:
+          'بین یک تا 2000 چند عدد صحیح وجود دارد که مضرب 11باشد ولی مضرب3 نباشد؟',
+        answers: {
+          a: '121',
+          b: '122',
+          c: '120',
+          d: '123',
+        },
+        correctAnswer: 'a',
+      },
+      {
+        id: 1,
+        title: 'Question 10',
+        description: ' یک از گزینه های زیر درست است ؟',
+        answers: {
+          a: 'مجموعه اعداد گویا و مجموعه اعدادی که از تقسیم یک عدد طبیعی بر یک عدد صحیح بدست می ایند باهم برابرند',
+          b: 'تعداد اعضای مجموعه اعداد اول کوچکتر از 10 با تعداد اعضای مجموعه اعداد طبیعی کوچکتر از 5 برابر است ',
+          c: 'مجموعه حروف کلمه (امینی) و مجموعه حروف کلمه ( نیما) برابرند',
+          d: 'مجموعه دختر خاله های دو پسرخاله باهم برابر هستند',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 11',
+        description:
+          'عضوی برابر 32 است این مجموعه چند عضو دارد؟2n-1تعداد زیر مجموعه های یک مجموعه',
+        answers: {
+          a: '5',
+          b: ' 2',
+          c: ' 3',
+          d: '32',
+        },
+        correctAnswer: 'a',
+      },
+      {
+        title: 'Question 12',
+        description: 'کدام یک از عبارت های گویای زیر قابل ساده شدن است؟',
+        answers: {
+          a: '(3-x)/(3-y)',
+          b: 'a^(2+5)/a',
+          c: '(2x^2-16)/x^(2-4) ',
+          d: '(4+x^2-4x)/(-2+x)',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 13',
+        description: 'در کدام گزینه شیب خط با بقیه گزینه ها متفاوت است؟',
+        answers: {
+          a: '6x=2+y',
+          b: '2y=6x-2',
+          c: '3ax-a/2 y=3',
+          d: 'میگذرد[■(2@-1)]و[■(3@5)]خطی که از دو نقطه ',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 14',
+        description:
+          'محیط یک مستطیل 82 واحد است اگر عرض این مستطیل 7 واحد کمتر از طول ان باشد ضلع کوچکتر این مستطیل کدام است؟',
+        answers: {
+          a: '16',
+          b: '17',
+          c: '18',
+          d: '19',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 15',
+        description: 'حاصل کدام گزینه عبارتی منفی است؟',
+        answers: {
+          a: '(〖-0/2)〗^(-2)',
+          b: '-〖(-2)〗^(-3)',
+          c: '-〖(-2)〗^(-2)',
+          d: '-(〖-3)〗^(-1)',
+        },
+        correctAnswer: 'c',
+      },
+      {
+        title: 'Question 16',
+        description: 'نماد علمی 7800000کدام گزینه است؟',
+        answers: {
+          a: '78×10^5',
+          b: '7/8×10^(-4)',
+          c: '7/8〖×10〗^(-6)',
+          d: '7/8×10^6',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 17',
+        description:
+          'در بین اعداد طبیعی چهار رقمی چند عدد مربع کامل وجود دارد؟',
+        answers: {
+          a: '67',
+          b: '68',
+          c: '69',
+          d: '70',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 18',
+        description:
+          'چند مجموعه سه عضوی وجود دارد که هر مجموعه ان زیر مجموعه ان نیز باشد؟',
+        answers: {
+          a: ' 1',
+          b: ' 2',
+          c: '8',
+          d: ' 4',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 19',
+        description:
+          'اگر در پرتاپ یک تاس بدانیم که عدد رو شده شمارنده عدد6 نمیباشد در این صورت تعداد کل پیشامد ها برابر است با:',
+        answers: {
+          a: '2',
+          b: '4',
+          c: '6',
+          d: '8',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 20',
+        description:
+          'مروز 30/11/97 است اگر رقم های مورد نیاز برای نوشتن تاریخ امروز را در یک مجموعه بنویسیم انگاه این مجموعه چند عضو دارد؟',
+        answers: {
+          a: '4',
+          b: '5',
+          c: '7',
+          d: '8',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 21',
+        description:
+          'از یک تا100 تعداد 25 عدد اول وجود دارد از یک تا 100 چند عدد مرکب وجود دارد؟',
+        answers: {
+          a: '75',
+          b: '74',
+          c: '73',
+          d: '72',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 22',
+        description: 'مجموعه اعداد صحیح زوج یک رقمی چند عضو دارد؟',
+        answers: {
+          a: '5',
+          b: '4',
+          c: '8',
+          d: '9',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 23',
+        description: 'اگر دو .چند ضلعی متشابه باشند همواره:',
+        answers: {
+          a: 'زاویه ها و ضلع هایشان به یک نسبت تغییر میکند',
+          b: 'زاویه ها باهم مساوی اند',
+          c: 'ضلع ها متناسب اند',
+          d: 'گزینه های 2و3',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 24',
+        description: 'کدام یک از کسرهای زیر متناوب اند؟',
+        answers: {
+          a: '7/20',
+          b: '4/35',
+          c: '7/25',
+          d: '7/16',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 25',
+        description: ' چند رقمی است؟8^7×25^8 عدد',
+        answers: {
+          a: '11',
+          b: '15',
+          c: '16',
+          d: '18',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 26',
+        description: '؟ است کدام 2/∛9 کسر ی شده گویا ',
+        answers: {
+          a: '2∛3',
+          b: '2/3 ∛9',
+          c: '∛(9^2 )',
+          d: '2/3 ∛3',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 27',
+        description: ' ندارد؟ وجود عامل کدامx^4-2x^3-x^2+2xعبارت تجزیه در ',
+        answers: {
+          a: 'x-2',
+          b: 'x+2',
+          c: 'x',
+          d: 'x-1',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        title: 'Question 28',
+        description: ' کدام است؟ 0/00029نماد علمی ',
+        answers: {
+          a: '2/9×10^(-4)',
+          b: '29×10^(-4)',
+          c: '2/9×10^4',
+          d: '29×10^4',
+        },
+        correctAnswer: 'a',
+      },
+      {
+        title: 'Question 29',
+        description:
+          'شیب خطی 2- است اگر به طول هر نقطه روی این خط 3 واحد اضافه کنیم به عرض انها چند واحد اضافه میشود تا نقاط حاصل نیز روی همین خط قرار گیرند؟',
+        answers: {
+          a: ' 1',
+          b: '-1',
+          c: '6',
+          d: '-6',
+        },
+        correctAnswer: 'd',
+      },
+      {
+        title: 'Question 30',
+        description: '؟ است کدام A=1/(1-x)+1/(1-1/x) حاصل ',
+        answers: {
+          a: '-x',
+          b: '(1-x)/(1+x)',
+          c: 'x',
+          d: '1',
+        },
+        correctAnswer: 'd',
+      },
+    ],
+  },
 ];
 export default exams;

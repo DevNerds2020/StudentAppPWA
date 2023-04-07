@@ -9,7 +9,7 @@ import ExamPage from '../components/ExamPage/ExamPage';
 import ToolsPage from '../components/tools/ToolsPage/toolsPage';
 import Books from '../components/Books/Books';
 import Notes from '../components/Notes/Notes';
-import PointTweets from '../components/PointTweets/PointTweets';
+// import PointTweets from '../components/PointTweets/PointTweets';
 import MoviesPage from '../components/MoviesPage/MoviesPage';
 
 const router = createBrowserRouter([
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
   {
     path: '/calendar',
     element: <CalendarPage />,
-    errorElement: <div>404</div>,
+    errorElement: <div>VIP</div>,
   },
   {
     path: '/aboutus',
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/mathtweets',
-    element: <PointTweets />,
-    errorElement: <div>404</div>,
+    element: <div>VIP</div>,
+    errorElement: <div>VIP</div>,
   },
   {
     path: '/exam/:examId',
