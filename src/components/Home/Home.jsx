@@ -108,7 +108,7 @@ function Home() {
                 link="teachingMovies"
               />
               <CustomButton
-                buttonName={`*(vip)*${translation[localeLanguage].books}`}
+                buttonName={`${translation[localeLanguage].books}`}
                 link="books"
               />
             </div>
