@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   Dialog,
   DialogActions,
@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { css } from '@emotion/css';
 import translation from '../../utils/translation';
+import url from '../../utils/backendConfig';
 
 const inputStyle = css`
   margin: 1rem !important;
@@ -18,7 +19,38 @@ const inputStyle = css`
 
 function LoginDialog(props) {
   const { open, closeDialog } = props;
+  const dispatch = useDispatch();
+  const formRef = useRef({
+    username: '',
+    password: '',
+  });
   const localeLanguage = useSelector((state) => state.data.localeLanguage);
+
+  const handleChange = (e) => {
+    formRef.current[e.target.name] = e.target.value;
+  };
+
+  const loginUser = async () => {
+    const response = await fetch(`${url}/users/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // set Content-Type header to application/json
+      },
+      body: JSON.stringify(formRef.current),
+    });
+    const data = await response.json();
+    if (data[0].id) {
+      dispatch({
+        type: 'SET_USER',
+        payload: data[0],
+      });
+    }
+  };
+
+  const handleClick = () => {
+    loginUser();
+    closeDialog();
+  };
 
   return (
     <Dialog
@@ -43,22 +75,26 @@ function LoginDialog(props) {
       >
         <TextField
           className={inputStyle}
-          label={translation[localeLanguage].email}
-          type="email"
-          name="email"
+          label={translation[localeLanguage].username}
+          type="username"
+          name="username"
+          onChange={handleChange}
         />
         <TextField
           className={inputStyle}
           label={translation[localeLanguage].password}
           type="password"
           name="password"
+          onChange={handleChange}
         />
       </DialogContent>
       <DialogActions>
         <Button onClick={closeDialog}>
           {translation[localeLanguage].cancel}
         </Button>
-        <Button>{translation[localeLanguage].login}</Button>
+        <Button onClick={handleClick}>
+          {translation[localeLanguage].login}
+        </Button>
       </DialogActions>
     </Dialog>
   );

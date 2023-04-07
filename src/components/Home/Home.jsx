@@ -108,13 +108,13 @@ function Home() {
                 link="teachingMovies"
               />
               <CustomButton
-                buttonName={translation[localeLanguage].books}
+                buttonName={`*(vip)*${translation[localeLanguage].books}`}
                 link="books"
               />
             </div>
             <div className="homeRows">
               <CustomButton
-                buttonName={translation[localeLanguage].calendar}
+                buttonName={`*(vip)*${translation[localeLanguage].calendar}`}
                 link="calendar"
               />
               <CustomButton

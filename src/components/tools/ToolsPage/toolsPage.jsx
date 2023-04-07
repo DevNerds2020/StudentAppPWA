@@ -13,6 +13,7 @@ import NumberDecomposer from '../NumberDecomposer/NumberDecomposer';
 import KhayyamTriangleRow from '../KhayyamTriangleRow/KhayyamTriangleRow';
 import PolygonDiameters from '../PolygonDiameters/PolygonDiameters';
 import PrimeNumber from '../CheckPrime/CheckPrime';
+import PiNumber from '../PiNumber/PiNumber';
 
 export default function ToolsPage() {
   const { localeLanguage } = useSelector((state) => state.data);
@@ -70,8 +71,8 @@ export default function ToolsPage() {
           <ToolButton name={translation[localeLanguage].decomposition}>
             <NumberDecomposer />
           </ToolButton>
-          <ToolButton name={translation[localeLanguage].unitConversion}>
-            <Fibonacci />
+          <ToolButton name={translation[localeLanguage].piNumber}>
+            <PiNumber />
           </ToolButton>
         </div>
       </Box>

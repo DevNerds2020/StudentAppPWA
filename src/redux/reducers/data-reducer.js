@@ -4,6 +4,7 @@ const initialState = {
   todoList: [],
   notesList: [],
   tweetsList: [],
+  user: {},
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -85,6 +86,12 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         notesList: [...state.notesList, action.payload],
+      };
+
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.payload,
       };
 
     default:

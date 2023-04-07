@@ -29,7 +29,35 @@ function Books() {
           `}
           sx={{ width: '100%', backgroundColor: '#2868c1' }}
         >
-          <a href="./src/assets/pdf/riyazitakmili.pdf">
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/558/C805.pdf">
+            <ListItem
+              alignItems="center"
+              className={css`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                  color: #393939;
+                  background-color: #f0f8ff;
+                  border-radius: 10px;
+                  transition: 0.5s;
+                }
+              `}
+            >
+              <ListItemAvatar>
+                <Avatar alt="book" src="./src/assets/pdf/riyazitakmili.png" />
+              </ListItemAvatar>
+              <Typography
+                className={css`
+                  color: #000;
+                `}
+              >
+                ریاضی هفتم
+              </Typography>
+            </ListItem>
+          </a>
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/558/C823.pdf">
             <ListItem
               alignItems="center"
               className={css`
@@ -57,7 +85,7 @@ function Books() {
               </Typography>
             </ListItem>
           </a>
-          <a href="./src/assets/pdf/Reyazi8.pdf">
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/555/C723.pdf">
             <ListItem
               alignItems="center"
               className={css`
@@ -85,7 +113,7 @@ function Books() {
               </Typography>
             </ListItem>
           </a>
-          <a href="./src/assets/pdf/takmili8.pdf">
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/555/C723.pdf">
             <ListItem
               alignItems="center"
               className={css`
@@ -113,7 +141,7 @@ function Books() {
               </Typography>
             </ListItem>
           </a>
-          <a href="./src/assets/pdf/Reyazi9.pdf">
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/556/C905.pdf">
             <ListItem
               alignItems="center"
               className={css`
@@ -141,7 +169,7 @@ function Books() {
               </Typography>
             </ListItem>
           </a>
-          <a href="./src/assets/pdf/takmili9.pdf">
+          <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/556/C923.pdf">
             <ListItem
               alignItems="center"
               className={css`
