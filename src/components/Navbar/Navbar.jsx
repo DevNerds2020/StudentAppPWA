@@ -36,6 +36,7 @@ function Navbar() {
         top: 0;
         position: fixed;
         min-width: 50vh;
+        padding-left: 1rem;
         @media (max-width: 600px){
           font-size: 1.5vh;
         }
