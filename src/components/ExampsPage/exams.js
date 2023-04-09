@@ -1,9 +1,9 @@
 const exams = [
   {
     id: 1,
-    title: 'Exam 1',
-    description: 'Exam 1 description',
-    time: 30, // minutes
+    title: 'هفتم',
+    description: 'آزمون هفتم',
+    time: 600, // minutes
     questions: [
       {
         id: 1,
@@ -309,8 +309,8 @@ const exams = [
   },
   {
     id: 2,
-    title: 'Exam 2',
-    description: 'Exam 2 description',
+    title: 'هشتم',
+    description: 'آزمون هشتنم',
     time: 30, // minutes
     questions: [
       {
@@ -691,8 +691,8 @@ const exams = [
   },
   {
     id: 3,
-    title: 'Exam 3',
-    description: 'Exam 3 description',
+    title: 'نهم',
+    description: 'آزمون نهم',
     time: 30, // minutes
     questions: [
       {

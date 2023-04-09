@@ -138,7 +138,7 @@ function ExamPage() {
             backgroundColor: '#2868c1',
           }}
         >
-          {pickedQuestionsRef.current.map((question) => (
+          {pickedQuestionsRef.current.map((question, index) => (
             <ListItem
               className={css`
                 display: flex;
@@ -146,9 +146,7 @@ function ExamPage() {
               `}
             >
               <FormControl dir={localeLanguage === 'en' ? 'ltr' : 'rtl'}>
-                <FormLabel>
-                  {`${question.id}-${question.description}`}
-                </FormLabel>
+                <FormLabel>{`${index + 1}-${question.description}`}</FormLabel>
                 <RadioGroup
                   name="radio-buttons-group"
                   onChange={(event) => handleChange(event, question.id)}
