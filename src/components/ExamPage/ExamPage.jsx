@@ -31,6 +31,7 @@ function ExamPage() {
   const { localeLanguage } = useSelector((state) => state.data);
   const percentMarkRef = useRef(0);
   const studentAnswersRef = useRef([]);
+  const pickedQuestionsRef = useRef([]);
   const rowDirection = localeLanguage === 'en' ? 'row' : 'row-reverse';
 
   const chooseRandom = (array) => {
@@ -43,10 +44,11 @@ function ExamPage() {
     }
     return randomArray;
   };
-
-  // pick 10 random questions if there are more than 10 questions
-  const pickedQuestions =
-    questions.length > 10 ? chooseRandom(questions) : questions;
+  useEffect(() => {
+    // pick 10 random questions if there are more than 10 questions
+    pickedQuestionsRef.current =
+      questions.length > 10 ? chooseRandom(questions) : questions;
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -68,7 +70,7 @@ function ExamPage() {
   const checkAnswers = () => {
     let correctAnswers = 0;
     studentAnswersRef.current.forEach((studentAnswer) => {
-      const question = pickedQuestions.find(
+      const question = pickedQuestionsRef.current.find(
         (targetQuestion) => targetQuestion.id === studentAnswer.questionId,
       );
       if (question?.correctAnswer === studentAnswer.answer) {
@@ -77,7 +79,8 @@ function ExamPage() {
     });
     // calculate the percentage of correct answers only two decimal places
     percentMarkRef.current =
-      Math.round((correctAnswers / pickedQuestions.length) * 10000) / 100;
+      Math.round((correctAnswers / pickedQuestionsRef.current.length) * 10000) /
+      100;
   };
 
   useEffect(() => {
@@ -135,7 +138,7 @@ function ExamPage() {
             backgroundColor: '#2868c1',
           }}
         >
-          {pickedQuestions.map((question) => (
+          {pickedQuestionsRef.current.map((question) => (
             <ListItem
               className={css`
                 display: flex;
@@ -144,7 +147,7 @@ function ExamPage() {
             >
               <FormControl dir={localeLanguage === 'en' ? 'ltr' : 'rtl'}>
                 <FormLabel>
-                  {`${question.description}-${question.id}`}
+                  {`${question.id}-${question.description}`}
                 </FormLabel>
                 <RadioGroup
                   name="radio-buttons-group"
