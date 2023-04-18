@@ -35,7 +35,7 @@ export default function ToolsPage() {
       <Box
         className={css`
           display: flex;
-          background-color: #0c1f3c;
+          background-color: #04333b;
           width: 50rem;
           justify-content: space-around;
         `}

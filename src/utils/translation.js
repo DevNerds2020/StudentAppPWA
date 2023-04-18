@@ -1,6 +1,6 @@
 const translation = {
   en: {
-    highSchoolBody: 'Your High School best friend',
+    highSchoolBody: 'rayeshmand',
     todo: 'Todo',
     exams: 'Exams',
     tools: 'Tools',
@@ -64,7 +64,7 @@ const translation = {
     username: 'Username',
   },
   fa: {
-    highSchoolBody: 'بهترین دوستتان در دبیرستان',
+    highSchoolBody: 'رایشمند',
     todo: 'لیست کارها',
     exams: 'آزمون ها',
     tools: 'ابزارها',
@@ -128,7 +128,7 @@ const translation = {
     username: 'نام کاربری',
   },
   ar: {
-    highSchoolBody: 'صديقك في المدرسة الثانوية',
+    highSchoolBody: 'رایشمند',
     todo: 'لائحة الأعمال',
     exams: 'الامتحانات',
     tools: 'أدوات',

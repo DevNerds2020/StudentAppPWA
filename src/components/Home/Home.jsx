@@ -68,7 +68,7 @@ function Home() {
         >
           <h2
             className={css`
-              font-size: 1rem;
+              font-size: 2rem;
               font-weight: bold;
               text-align: center;
               margin-bottom: 1.5rem;
