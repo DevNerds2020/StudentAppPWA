@@ -36,7 +36,7 @@ function ToolButton(props) {
             cursor: pointer;
             font-family: lalezar;
             text-decoration: none;
-            background-color: #8f94fb;
+            background-color: #bfc1e0;
             color: #000000;
             width: 150px;
             height: 50px;

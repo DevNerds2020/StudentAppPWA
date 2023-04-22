@@ -51,7 +51,7 @@ function Navbar() {
           flex-wrap: wrap;
           flex-direction: row;
           width: 100%;
-          background-color: #8f94fb;
+          background-color: #bfc1e0;
         `}
       >
         <div onClick={() => setOpenDialog('about')}>

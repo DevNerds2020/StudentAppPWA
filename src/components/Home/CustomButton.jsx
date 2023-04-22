@@ -15,7 +15,7 @@ function CustomButton(props) {
         className={css`
           font-family: lalezar;
           text-decoration: none;
-          background-color: #8f94fb;
+          background-color: #bfc1e0;
           color: #000000;
           width: 20vh;
           height: 5vh;
